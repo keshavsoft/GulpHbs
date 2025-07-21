@@ -25,10 +25,12 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> _sidenav path="../.." page="index"}}
+    {{> _sidenav path="../.." page="show"}}
 
     <main class="content">
         {{> _topbar path="../.."}}
+
+        {{> _breadCrumb path="../.." page="show"}}
 
         <div id="toolbar">
             <a id="RefreshATagId" href="#"

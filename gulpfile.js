@@ -78,6 +78,7 @@ const paths = {
 };
 
 var templateData = {
+    TableName: CommonColumns.tableName,
     firstName: 'KeshavSoft',
     Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }],
     SideBarItems: [{

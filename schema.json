@@ -1,32 +1,43 @@
 {
-    "tableName": "AccountsTable",
+    "tableName": "GpsTable",
     "columns": [
-       {
-            "field": "AccountName",
-            "title": "Account Name",
-            "unique": true,
-            "type": "STRING",
+        {
+            "field": "DateTime",
+            "title": "Date Time",
             "isInput": true
         },
         {
-            "field": "BSGroup",
-            "title": "Balance Sheet Group",
-            "isInput": true
+            "field": "TreeName",
+            "title": "Tree Name",
+            "isInput": true,
+            "filterControl": "input"
+        },
+        {
+            "field": "Latitude",
+            "isInput": true,
+            "title": "Latitude",
+            "type": "STRING"
+        },
+        {
+            "field": "Longitude",
+            "title": "Longitude",
+            "isInput": true,
+            "type": "STRING"
+        },
+        {
+            "field": "UserName",
+            "title": "UserName",
+            "isInput": true,
+            "filterControl": "select"
+        },
+        {
+            "field": "pk",
+            "title": "pk",
+            "isInput": true,
+            "type": "STRING",
+            "visible": false
         }
     ],
     "data": [],
-    "Vertical": [
-       {
-            "field": "AccountName",
-            "title": "Account Name",
-            "unique": true,
-            "type": "STRING",
-            "isInput": true
-        },
-        {
-            "field": "BSGroup",
-            "title": "Balance Sheet Group",
-            "isInput": true
-        }
-    ]
+    "Vertical": []
 }

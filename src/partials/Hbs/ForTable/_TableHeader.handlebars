@@ -1,0 +1,12 @@
+<tr>
+    {{#each columns}}
+    <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
+        filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if (isVisible this)}}
+        data-visible={{visible}}{{/if}}>
+        {{title}}
+    </th>
+    {{/each}}
+    <th data-field="KS-Save">
+        Options
+    </th>
+</tr>

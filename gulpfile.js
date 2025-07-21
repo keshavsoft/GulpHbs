@@ -128,6 +128,14 @@ options = {
         },
         isEqual: (value1, value2) => {
             return value1 === value2;
+        },
+        isKeyPresent: (inObject, inKey) => {
+            console.log("aaaaaaaaaaaa : ", inObject, inKey);
+
+            return inKey in inObject;
+        },
+        isVisible: (inObject) => {
+            return "visible" in inObject;
         }
     }
 };

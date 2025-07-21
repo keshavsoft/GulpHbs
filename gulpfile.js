@@ -36,6 +36,7 @@ dotenv.config();
 
 // Load and enhance schema.json
 const CommonColumns = require("./schema.json");
+const SideBarItems = require("./SideBar.json");
 
 // Define paths
 const paths = {
@@ -82,23 +83,7 @@ var templateData = {
     TableName: CommonColumns.tableName,
     firstName: 'KeshavSoft',
     Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }],
-    SideBarItems: [{
-        Name: "create",
-        DisplayName: "Create",
-        IconClass: "bi bi-card-list",
-        SpanClass: "text-success"
-    },
-    {
-        Name: "show",
-        DisplayName: "Show",
-        IconClass: "bi bi-card-list",
-        SpanClass: "text-success"
-    }, {
-        Name: "footerCreate",
-        DisplayName: "footerCreate",
-        IconClass: "bi bi-card-list",
-        SpanClass: "text-success"
-    }],
+    SideBarItems: SideBarItems,
     TableColumns: CommonColumns.columns,
     columns: CommonColumns.columns
 };

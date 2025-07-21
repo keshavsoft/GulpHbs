@@ -1,0 +1,27 @@
+[ {   
+        "Name": "create",
+        "DisplayName": "Create",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "show",
+        "DisplayName": "Show",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "footerCreate",
+        "DisplayName": "footerCreate",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "verticalCreate",
+        "DisplayName": "VerticalCreate",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success"
+    }
+
+]
+   

@@ -45,16 +45,7 @@
 
 
             {{#each SideBarItems}}
-            <li class="nav-item {{#if (isEqual Name ../page)}}
-            active
-            {{/if}}">
-                <a href="./{{Name}}.html" class="nav-link">
-                    <span class="sidebar-icon {{SpanClass}}">
-                        <i class="{{IconClass}}"></i>
-                    </span>
-                    <span class="sidebar-text">{{DisplayName}}</span>
-                </a>
-            </li>
+            {{> SideNavs/_directItem}}
             {{/each}}
         </ul>
     </div>

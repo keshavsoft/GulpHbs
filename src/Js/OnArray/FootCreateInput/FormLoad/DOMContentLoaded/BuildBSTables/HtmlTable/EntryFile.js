@@ -1,4 +1,3 @@
-import commonConfigJson from '../../../../../Config.json' with {type: 'json'};
 import { StartFunc as StartFuncFromOnPostBody } from "./OnPostBody/EntryFile.js";
 
 const StartFunc = () => {
@@ -6,6 +5,7 @@ const StartFunc = () => {
 
     let LocalConfig = {};
     LocalConfig.onPostBody = StartFuncFromOnPostBody;
+    LocalConfig.autoFocus = "Latitude";
 
     $table.bootstrapTable(LocalConfig);
 };

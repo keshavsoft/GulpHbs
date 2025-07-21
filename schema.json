@@ -4,7 +4,12 @@
         {
             "field": "DateTime",
             "title": "Date Time",
-            "isInput": true
+            "isInput": false,
+            "isDate": true,
+            "dateConfig": {
+                "min": "2025-07-01",
+                "max": "2025-07-25"
+            }
         },
         {
             "field": "TreeName",
@@ -14,9 +19,15 @@
         },
         {
             "field": "Latitude",
-            "isInput": true,
+            "isInput": false,
             "title": "Latitude",
-            "type": "STRING"
+            "isNumber": true,
+            "type": "STRING",
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            }
         },
         {
             "field": "Longitude",

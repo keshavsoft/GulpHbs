@@ -76,7 +76,14 @@ const paths = {
 
 var templateData = {
     firstName: 'KeshavSoft',
-    Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }]
+    Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }],
+    SideBarItems: [{
+        Name: "create",
+        DisplayName: "Create",
+        IconClass: "bi bi-card-list",
+        SpanClass: "text-success"
+    },
+    { Name: "index" }, { Name: "KeshavSoft" }]
 };
 
 options = {

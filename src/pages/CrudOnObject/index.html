@@ -23,19 +23,12 @@
 </head>
 
 <body>
-    @@include('./CrudOnObject/_nav.html', {
-    "path": "../.."
-    })
+    {{> _nav path="../.."}}
 
-    @@include('./CrudOnObject/_sidenav.html', {
-    "path": "../..",
-    "page": "index"
-    })
+    {{> _sidenav path="../.." page="index"}}
 
     <main class="content">
-        @@include('./CrudOnObject/_topbar.html', {
-        "path": "../.."
-        })
+        {{> _topbar path="../.."}}
 
         <div class="row mt-5">
             <div class="col-12 col-sm-6 col-xl-4 mb-4">
@@ -83,15 +76,9 @@
                 </div>
             </div>
         </div>
+        {{> _footer path="../.."}}
 
-        @@include('./CrudOnObject/_footer.html', {
-        "path": "../..",
-        "classes": "bg-gray-800 text-white"
-        })
-
-        @@include('./CrudOnObject/_scripts.html', {
-        "path": "../.."
-        })
+        {{> _scripts path="../.."}}
     </main>
 
 </body>

@@ -1,0 +1,46 @@
+<div class="col-12">
+  <div class="mb-4">
+    <label for="HtmlId-{{field}}" class="form-label">
+      {{#if title}}
+        {{title}}
+      {{else}}
+        {{field}}
+      {{/if}}
+    </label>
+
+    {{#if isInput}}
+    
+      <input
+        {{#if type}}type="{{type}}"{{/if}}
+        class="form-control"
+        id="HtmlId-{{field}}"
+        name="{{field}}"
+        autocomplete="off"
+        {{#if required}}required{{/if}}
+        {{#if numberConfig.step}}step="{{numberConfig.step}}"{{/if}}
+        {{#if numberConfig.min}}min="{{numberConfig.min}}"{{/if}}
+        {{#if numberConfig.max}}max="{{numberConfig.max}}"{{/if}} />
+    {{/if}}
+
+    {{#if isSelect}}
+      <select name="{{field}}" id="HtmlId-{{field}}" class="form-select">
+        {{#each selectOptions}}
+          <option value="{{this.value}}">{{this.text}}</option>
+        {{/each}}
+      </select>
+    {{/if}}
+
+    {{#if isDataList}}
+      <input class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLId-{{field}}" />
+      <datalist id="HtmlDLId-{{field}}">
+        {{#each selectOptions}}
+          <option value="{{this.value}}">{{this.text}}</option>
+        {{/each}}
+      </datalist>
+    {{/if}}
+
+    <div class="invalid-feedback">
+      {{errorMessage}}
+    </div>
+  </div>
+</div>

@@ -93,12 +93,13 @@ var templateData = {
         IconClass: "bi bi-card-list",
         SpanClass: "text-success"
     }, {
-        Name: "createFooter",
-        DisplayName: "CreateFooter",
+        Name: "footerCreate",
+        DisplayName: "footerCreate",
         IconClass: "bi bi-card-list",
         SpanClass: "text-success"
     }],
-    TableColumns: CommonColumns.columns
+    TableColumns: CommonColumns.columns,
+    columns: CommonColumns.columns
 };
 
 options = {
@@ -154,6 +155,7 @@ gulp.task("index", function () {
         .src([paths.src.base + "*.html"])
         .pipe(handlebars(templateData, options))
         .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
             return {
                 dirname: path.dirname,
                 basename: path.basename,

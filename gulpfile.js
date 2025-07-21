@@ -29,6 +29,7 @@ var rename = require('gulp-rename');
 
 const fse = require("fs-extra");
 const { StartFunc: CommonGulpCode } = require("./GulpCode/entryFile");
+const { options: optionsObject } = require("./options");
 
 var dotenv = require("dotenv");
 dotenv.config();
@@ -161,7 +162,7 @@ gulp.task("scss", function () {
 gulp.task("index", function () {
     return gulp
         .src([paths.src.base + "*.html"])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             console.log("Renaming path: ", path);
             return {
@@ -175,41 +176,9 @@ gulp.task("index", function () {
 });
 
 gulp.task("html", function () {
-    var templateData = {
-        firstName: 'KeshavSoft',
-        Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }]
-    };
-
-    options = {
-        ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
-        partials: {
-            footer: '<footer>the end</footer>'
-        },
-        batch: ['./src/partials'],
-        helpers: {
-            capitals: function (str) {
-                return str.toUpperCase();
-            },
-            compare: (k1, k2, options) => {
-                if (k1 == k2) {
-                    return k1;
-                } else {
-                    return options.inverse(this);
-                }
-            },
-            compare1: (value1, value2, options) => {
-                if (value1 === value2) {
-                    return options.fn(this); // Render content within the block if true
-                } else {
-                    return options.inverse(this); // Render content within the else block if false
-                }
-            }
-        }
-    };
-
     return gulp
         .src([paths.src.html])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,
@@ -296,7 +265,7 @@ gulp.task("minify:html", function () {
     return gulp
         .src([paths.dist.html + "/**/*.html"])
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,
@@ -311,7 +280,7 @@ gulp.task("minify:html:index", function () {
     return gulp
         .src([paths.dist.base + "*.html"])
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,
@@ -360,23 +329,10 @@ gulp.task("copy:dev:css", function () {
         .pipe(gulp.dest(paths.dev.css));
 });
 
-gulp.task("copy:dist:html1", function () {
-    return gulp
-        .src([paths.src.html])
-        .pipe(
-            fileinclude({
-                prefix: "@@",
-                basepath: "./src/partials/",
-                context: getFileIncludeContext("production"),
-            })
-        )
-        .pipe(gulp.dest(paths.dist.html));
-});
-
 gulp.task("copy:dist:html", function () {
     return gulp
         .src([paths.src.html])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,
@@ -390,7 +346,7 @@ gulp.task("copy:dist:html", function () {
 gulp.task("copy:dev:html", function () {
     return gulp
         .src([paths.src.html])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,
@@ -404,7 +360,7 @@ gulp.task("copy:dev:html", function () {
 gulp.task("copy:dist:html:index", function () {
     return gulp
         .src([paths.src.base + "*.html"])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,
@@ -418,7 +374,7 @@ gulp.task("copy:dist:html:index", function () {
 gulp.task("copy:dev:html:index", function () {
     return gulp
         .src([paths.src.base + "*.html"])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(templateData, optionsObject))
         .pipe(rename((path) => {
             return {
                 dirname: path.dirname,

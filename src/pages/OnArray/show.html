@@ -25,7 +25,7 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> SideNavs/_withCollapse path="../.." page="show"}}
+    {{> SideNavs/Collapsable/_withCollapse path="../.." page="show"}}
 
     <main class="content">
         {{> _topbar path="../.."}}
@@ -54,12 +54,12 @@
                         <thead>
                             <tr>
                                 {{#each TableColumns}}
-                                
+
                                 <th data-field="{{field}}">
                                     {{title}}
                                 </th>
                                 {{/each}}
-                            </tr>    
+                            </tr>
                         </thead>
                     </table>
                 </div>

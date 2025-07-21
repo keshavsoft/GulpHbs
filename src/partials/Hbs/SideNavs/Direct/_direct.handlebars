@@ -43,15 +43,8 @@
                 </a>
             </li>
 
-
             {{#each SideBarItems}}
-            {{#if isCollapsable}}
-            {{> SideNavs/_CollapseItem}}
-            {{else}}
-            {{> SideNavs/_directItem}}
-            {{/if}}
-
-
+            {{> SideNavs/Direct/_directItem}}
             {{/each}}
         </ul>
     </div>

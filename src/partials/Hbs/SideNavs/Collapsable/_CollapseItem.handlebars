@@ -12,12 +12,8 @@
     <div class="multi-level collapse  @@if (context.isExpanded) { show }" id="submenu-@@Name" role="list"
         aria-expanded="false" data-bs-parent="#sidebarMenu">
         <ul class="flex-column nav">
-            {{#each columns}}
-            <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
-                filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if (isVisible this)}}
-                data-visible={{visible}}{{/if}}>
-                {{title}}
-            </th>
+            {{#each SubItems}}
+            {{> SideNavs/Collapsable/_subItem}}
             {{/each}}
         </ul>
     </div>

@@ -1,4 +1,5 @@
-[ {   
+[
+    {
         "Name": "create",
         "DisplayName": "Create",
         "IconClass": "bi bi-card-list",
@@ -15,7 +16,15 @@
         "DisplayName": "ShowAll",
         "IconClass": "bi bi-card-list",
         "SpanClass": "text-success",
-        "isCollapsable": true
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "Name": "show",
+                "DisplayName": "Show",
+                "IconClass": "bi bi-card-list",
+                "SpanClass": "text-success"
+            }
+        ]
     },
     {
         "Name": "footerCreate",
@@ -29,6 +38,4 @@
         "IconClass": "bi bi-card-list",
         "SpanClass": "text-success"
     }
-
 ]
-   

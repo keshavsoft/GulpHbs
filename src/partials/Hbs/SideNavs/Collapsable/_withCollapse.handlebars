@@ -45,7 +45,11 @@
 
 
             {{#each SideBarItems}}
-            {{> SideNavs/_directItem}}
+            {{#if isCollapsable}}
+            {{> SideNavs/Collapsable/_CollapseItem}}
+            {{else}}
+            {{> SideNavs/Direct/_directItem}}
+            {{/if}}
             {{/each}}
         </ul>
     </div>

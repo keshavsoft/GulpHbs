@@ -11,6 +11,13 @@
         "SpanClass": "text-success"
     },
     {
+        "Name": "showAll",
+        "DisplayName": "ShowAll",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success",
+        "isCollapsable": true
+    },
+    {
         "Name": "footerCreate",
         "DisplayName": "footerCreate",
         "IconClass": "bi bi-card-list",

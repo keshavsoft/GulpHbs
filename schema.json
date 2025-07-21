@@ -1,6 +1,40 @@
 {
-    "tableName": "mobiles",
-    "columns": [],
+    "tableName": "ReceiptsTable",
+    "columns": [
+        {
+            "field": "AccountName",
+            "title": "Account Name",
+            "isInput": true
+        },
+        {
+            "field": "Date",
+            "title": "Date",
+            "isDate": true,
+            "dateConfig": {
+                "min": "2025-07-01",
+                "max": "2025-07-25"
+            }
+        },
+        {
+            "field": "Description",
+            "title": "Description",
+            "isInput": true
+        },
+        {
+            "field": "Amount",
+            "align": "right",
+            "title": "Amount",
+            "type": "number",
+            "isNumber": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true
+        }
+    ],
     "data": [],
     "Vertical": []
 }

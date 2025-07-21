@@ -33,6 +33,9 @@ const { StartFunc: CommonGulpCode } = require("./GulpCode/entryFile");
 var dotenv = require("dotenv");
 dotenv.config();
 
+// Load and enhance schema.json
+const CommonColumns = require("./schema.json");
+
 // Define paths
 const paths = {
     dist: {
@@ -83,7 +86,18 @@ var templateData = {
         IconClass: "bi bi-card-list",
         SpanClass: "text-success"
     },
-    { Name: "index" }, { Name: "KeshavSoft" }]
+    {
+        Name: "show",
+        DisplayName: "Show",
+        IconClass: "bi bi-card-list",
+        SpanClass: "text-success"
+    }, {
+        Name: "createFooter",
+        DisplayName: "CreateFooter",
+        IconClass: "bi bi-card-list",
+        SpanClass: "text-success"
+    }],
+    TableColumns: CommonColumns.columns
 };
 
 options = {

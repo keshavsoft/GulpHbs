@@ -5,19 +5,13 @@ var dotenv = require("dotenv");
 dotenv.config();
 
 const StartFunc = ({ inDistPath }) => {
-    // LocalFuncReplaceSchema({ inDistPath });
-    // LocalFuncReplaceInSubTable({ inDistPath });
-    // LocalFuncFromConfig({ inDistPath });
-    // LocalFuncForCrudStaticColumn({ inDistPath });
-    // LocalFuncForCrudDynamicCol({ inDistPath });
-    // LocalFuncForCalendar({ inDistPath });
-    LocalFuncForCrudOnObject({ inDistPath });
+    LocalFuncForOnArray({ inDistPath });
 };
 
-const LocalFuncForCrudOnObject = ({ inDistPath }) => {
+const LocalFuncForOnArray = ({ inDistPath }) => {
     const LocalDistPath = inDistPath;
 
-    const filePath = `${LocalDistPath}/Js/CrudOnObject/Config.json`;
+    const filePath = `${LocalDistPath}/Js/OnArray/Config.json`;
 
     const content = fse.readFileSync(filePath, 'utf-8');
     const contentAsJson = JSON.parse(content);

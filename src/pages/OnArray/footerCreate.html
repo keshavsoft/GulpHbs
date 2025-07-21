@@ -25,12 +25,12 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> _sidenav path="../.." page="show"}}
+    {{> _sidenav path="../.." page="footercreate"}}
 
     <main class="content">
         {{> _topbar path="../.."}}
 
-        {{> _breadCrumb path="../.." page="show"}}
+        {{> _breadCrumb path="../.." page="footercreate"}}
 
         <div id="toolbar">
             <a id="RefreshATagId" href="#"
@@ -45,22 +45,48 @@
                 </svg>
             </a>
         </div>
-
         <div class="card ">
             <div class="card-body">
                 <div class="table-responsive">
+
                     <table id="table" class="table table-bordered table-striped" data-show-footer="true"
-                        data-toolbar="#toolbar" data-search="true" data-show-footer="true">
+                        data-toolbar="#toolbar">
                         <thead>
                             <tr>
-                                {{#each TableColumns}}
-                                
-                                <th data-field="{{field}}">
-                                    {{title}}
+                                {{#each columns}}
+                                {{log "this" this}}
+                                <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
+                                    filterControl}}data-filter-control="{{filterControl}}" {{/if}}>
+                                    {{#if title}}{{title}}{{/if}}
                                 </th>
                                 {{/each}}
-                            </tr>    
+                                <th data-field="KS-Save">
+                                    Options
+                                </th>
+
+                            </tr>
                         </thead>
+
+
+                        <tfoot>
+                            <tr>
+                                {{#each columns}}
+                                <th>
+                                    {{#if isInput}}
+                                    <input class="form-control" id="HtmlId-{{field}}" name="{{field}}"
+                                        autocomplete="off" {{#if required}}required{{/if}} />
+                                    {{/if}}
+
+                                </th>
+                                {{/each}}
+                                <th>
+                                    <button class="btn btn-sm btn-success save-btn" id="TableFooterSaveButtonId"
+                                        data-index="{{@index}}">Save</button>
+                                </th>
+                                
+                            </tr>
+                        </tfoot>
+
                     </table>
                 </div>
             </div>
@@ -69,7 +95,7 @@
 
         {{> _scripts path="../.."}}
 
-        <script type="module" src="../../Js/OnArray/Show/entryFile.js"></script>
+        <script type="module" src="../../Js/OnArray/FootCreateInput/entryFile.js"></script>
     </main>
 
 </body>

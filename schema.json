@@ -1,10 +1,14 @@
 {
-    "tableName": "GpsTable",
+    "tableName": "JournalsTable",
     "columns": [
         {
-            "field": "DateTime",
-            "title": "Date Time",
-            "isInput": false,
+            "field": "AccountName",
+            "title": "Account Name",
+            "isInput": true
+        },
+        {
+            "field": "Date",
+            "title": "Date",
             "isDate": true,
             "dateConfig": {
                 "min": "2025-07-01",
@@ -12,43 +16,40 @@
             }
         },
         {
-            "field": "TreeName",
-            "title": "Tree Name",
-            "isInput": true,
-            "filterControl": "input"
+            "field": "Description",
+            "title": "Description",
+            "isInput": true
         },
         {
-            "field": "Latitude",
-            "isInput": false,
-            "title": "Latitude",
+            "field": "Credit",
+            "title": "Credit",
+            "type": "number",
             "isNumber": true,
-            "type": "STRING",
             "numberConfig": {
                 "step": "0.01",
                 "min": "0",
                 "max": "999999999"
-            }
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true
         },
         {
-            "field": "Longitude",
-            "title": "Longitude",
-            "isInput": true,
-            "type": "STRING"
-        },
-        {
-            "field": "UserName",
-            "title": "UserName",
-            "isInput": true,
-            "filterControl": "select"
-        },
-        {
-            "field": "pk",
-            "title": "pk",
-            "isInput": true,
-            "type": "STRING",
-            "visible": false
+            "field": "Debit",
+            "title": "Debit",
+            "type": "number",
+            "isNumber": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true
         }
     ],
     "data": [],
-    "Vertical": []
+    "Vertical": [],
+    "autoFocus": "Date"
 }

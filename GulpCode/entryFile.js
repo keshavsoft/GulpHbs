@@ -19,6 +19,8 @@ const LocalFuncForOnArray = ({ inDistPath }) => {
     contentAsJson.TableName = contentAsJson.TableName.replace("$TableName", CommonColumns.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace("$ApiVersion", process.env.VERSION);
 
+    contentAsJson.DataTableOptions.Header.autoFocus = process.env.autoFocus;
+    
     fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };
 

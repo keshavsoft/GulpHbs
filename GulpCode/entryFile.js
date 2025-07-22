@@ -1,5 +1,5 @@
 const fse = require("fs-extra");
-const CommonColumns = require("../schema.json");
+const CommonSchemaJson = require("../schema.json");
 
 var dotenv = require("dotenv");
 dotenv.config();
@@ -15,11 +15,12 @@ const LocalFuncForOnArray = ({ inDistPath }) => {
 
     const content = fse.readFileSync(filePath, 'utf-8');
     const contentAsJson = JSON.parse(content);
-    contentAsJson.columns = CommonColumns.columns;
-    contentAsJson.TableName = contentAsJson.TableName.replace("$TableName", CommonColumns.tableName);
+    contentAsJson.columns = CommonSchemaJson.columns;
+    contentAsJson.TableName = contentAsJson.TableName.replace("$TableName", CommonSchemaJson.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace("$ApiVersion", process.env.VERSION);
 
-    contentAsJson.DataTableOptions.Header.autoFocus = process.env.autoFocus;
+    // contentAsJson.DataTableOptions.Header.autoFocus = process.env.autoFocus;
+     contentAsJson.DataTableOptions = CommonSchemaJson.DataTableOptions;
     
     fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };

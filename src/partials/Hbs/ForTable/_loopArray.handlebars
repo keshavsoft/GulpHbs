@@ -1,46 +1,42 @@
-<div class="col-12">
-  <div class="mb-4">
+{{#each columns}}
+  <div class="col-lg-12 col-md-6 mb-3">
     <label for="HtmlId-{{field}}" class="form-label">
-      {{#if title}}
-        {{title}}
-      {{else}}
-        {{field}}
-      {{/if}}
+      {{#if title}}{{title}}{{else}}{{field}}{{/if}}
     </label>
 
     {{#if isInput}}
-    
       <input
-        {{#if type}}type="{{type}}"{{/if}}
+        type="text"
         class="form-control"
         id="HtmlId-{{field}}"
         name="{{field}}"
         autocomplete="off"
-        {{#if required}}required{{/if}}
-        {{#if numberConfig.step}}step="{{numberConfig.step}}"{{/if}}
-        {{#if numberConfig.min}}min="{{numberConfig.min}}"{{/if}}
-        {{#if numberConfig.max}}max="{{numberConfig.max}}"{{/if}} />
+        {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} />
     {{/if}}
 
-    {{#if isSelect}}
-      <select name="{{field}}" id="HtmlId-{{field}}" class="form-select">
-        {{#each selectOptions}}
-          <option value="{{this.value}}">{{this.text}}</option>
-        {{/each}}
-      </select>
+    {{#if isDate}}
+      <input
+        type="date"
+        class="form-control"
+        id="HtmlId-{{field}}"
+        name="{{field}}"
+        {{#if dateConfig.min}}min="{{dateConfig.min}}"{{/if}}
+        {{#if dateConfig.max}}max="{{dateConfig.max}}"{{/if}}
+        {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} />
     {{/if}}
 
-    {{#if isDataList}}
-      <input class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLId-{{field}}" />
-      <datalist id="HtmlDLId-{{field}}">
-        {{#each selectOptions}}
-          <option value="{{this.value}}">{{this.text}}</option>
-        {{/each}}
-      </datalist>
+    {{#if isNumber}}
+      <input
+        type="number"
+        class="form-control"
+        id="HtmlId-{{field}}"
+        name="{{field}}"
+        step="{{numberConfig.step}}"
+        min="{{numberConfig.min}}"
+        max="{{numberConfig.max}}"
+        {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} />
     {{/if}}
 
-    <div class="invalid-feedback">
-      {{errorMessage}}
-    </div>
+    <div class="invalid-feedback">{{errorMessage}}</div>
   </div>
-</div>
+{{/each}}

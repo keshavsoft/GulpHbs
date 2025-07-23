@@ -13,8 +13,14 @@
         "isCollapsable": true,
         "SubItems": [
             {
-                "Name": "show",
-                "DisplayName": "Show",
+                "SubItemName": "showAsIs",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-card-list",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showGroupBy",
+                "DisplayName": "showGroupBy",
                 "IconClass": "bi bi-card-list",
                 "SpanClass": "text-success"
             }
@@ -23,12 +29,6 @@
     {
         "Name": "footerCreate",
         "DisplayName": "footerCreate",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success"
-    },
-    {
-        "Name": "showGroupBy",
-        "DisplayName": "showGroupBy",
         "IconClass": "bi bi-card-list",
         "SpanClass": "text-success"
     },

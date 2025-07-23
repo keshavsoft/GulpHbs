@@ -8,7 +8,7 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> SideNavs/Collapsable/_withCollapse path="../.." page="SetSingleColumns"}}
+    
 
     <main class="content">
         {{> _topbar path="../.."}}
@@ -37,7 +37,7 @@
                         <thead>
                             <tr>
                                 {{#each TableColumns}}
-                                {{#if (eq field "AccountName")}}
+                                {{#if (isEqual field "AccountName")}}
                                 <th data-field="{{field}}">
                                     {{title}}
                                 </th>

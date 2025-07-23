@@ -37,14 +37,16 @@
                         <thead>
                             <tr>
                                 {{#each TableColumns}}
-
+                                {{#if (eq field "AccountName")}}
                                 <th data-field="{{field}}">
                                     {{title}}
                                 </th>
+                                {{/if}}
                                 {{/each}}
                             </tr>
                         </thead>
                     </table>
+
                 </div>
             </div>
         </div>

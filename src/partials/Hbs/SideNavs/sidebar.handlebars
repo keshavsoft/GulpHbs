@@ -39,12 +39,28 @@
                     <span class="sidebar-icon">
                         <img src="{{path}}/assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">{{page}}</span>
+                    <span class="mt-1 ms-1 sidebar-text">{{DisplayName}}</span>
                 </a>
             </li>
 
+
             {{#each SideBarItems}}
-            {{> SideNavs/Direct/_directItem}}
+            {{#if isCollapsable}}
+            {{> SideNavs/Collapsable/_CollapseItem
+            Name=Name
+            Name=SubItemName
+            DisplayName=DisplayName
+            SubItems=SubItems
+            currentPage=../currentPage
+            currentPageGroup=../currentPageGroup }}
+            {{else}}
+            {{> SideNavs/Direct/_directItem
+            Name=Name
+            DisplayName=DisplayName
+            SpanClass=SpanClass
+            currentPage=../currentPage
+            isActive=(isEqual Name ../currentPage) }}
+            {{/if}}
             {{/each}}
         </ul>
     </div>

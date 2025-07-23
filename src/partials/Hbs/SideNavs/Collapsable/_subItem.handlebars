@@ -1,6 +1,7 @@
-<li class="nav-item  @@if (context.isActive) { active }">
-    <a class="nav-link d-flex align-items-center" href="./@@Name.html">
-        <span class="sidebar-text-contracted text-secondary">S</span>
-        <span class="sidebar-text">{{DisplayName}}</span>
-    </a>
+{{!-- SideNavs/Collapsable/_subItem.hbs --}}
+<li class="nav-item{{#if isActive}} active{{/if}}">
+  <a class="nav-link d-flex align-items-center" href="./{{SubItemName}}.html">
+    <span class="sidebar-text-contracted text-secondary">S</span>
+    <span class="sidebar-text">{{DisplayName}}</span>
+  </a>
 </li>

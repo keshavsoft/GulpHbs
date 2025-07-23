@@ -37,6 +37,11 @@ dotenv.config();
 // Load and enhance schema.json
 const CommonColumns = require("./schema.json");
 const SideBarItems = require("./SideBar.json");
+const Handlebars = require('handlebars');
+
+Handlebars.registerHelper('eq', function (a, b) {
+    return a === b;
+});
 
 // Define paths
 const paths = {

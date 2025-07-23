@@ -36,7 +36,6 @@ const LocalFuncForRead = ({ inDistPath }) => {
     contentAsJson.columns = CommonSchemaJson.columns;
     contentAsJson.TableName = contentAsJson.TableName.replace("$TableName", CommonSchemaJson.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace("$ApiVersion", process.env.VERSION);
-
      contentAsJson.DataTableOptions = CommonSchemaJson.DataTableOptions;
     
     fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');

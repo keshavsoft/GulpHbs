@@ -25,12 +25,13 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> SideNavs/Collapsable/_withCollapse path="../.." page="show"}}
+    {{> SideNavs/sidebar path="../.." currentPage="showAsIs" currentPageGroup="show"}}
+
 
     <main class="content">
         {{> _topbar path="../.."}}
 
-        {{> _breadCrumb path="../.." page="show"}}
+        {{> _breadCrumb path="../.." page="showAsIs"}}
 
         <div id="toolbar">
             <a id="RefreshATagId" href="#"
@@ -69,7 +70,7 @@
 
         {{> _scripts path="../.."}}
 
-        <script type="module" src="../../Js/OnArray/Show/entryFile.js"></script>
+        <script type="module" src="../../Js/OnArray/showAsIs/entryFile.js"></script>
     </main>
 
 </body>

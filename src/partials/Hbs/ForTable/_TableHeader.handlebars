@@ -1,4 +1,6 @@
 <tr>
+    <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+
     {{#each columns}}
     <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
         filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if (isVisible this)}}
@@ -10,3 +12,9 @@
         Options
     </th>
 </tr>
+
+<script>
+    window.GlobalSerialFormatter = (value, row, index) => {
+        return index + 1;
+    };
+</script>

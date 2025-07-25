@@ -37,9 +37,7 @@ dotenv.config();
 // Load and enhance schema.json
 const CommonColumns = require("./schema.json");
 const SideBarItems = require("./SideBar.json");
-
-
-
+const SideBarForCalender = require("./SideBarForCalender.json");
 
 // Define paths
 const paths = {
@@ -87,6 +85,7 @@ var templateData = {
     firstName: 'KeshavSoft',
     Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }],
     SideBarItems: SideBarItems,
+    SideBarForCalender: SideBarForCalender,
     TableColumns: CommonColumns.columns,
     columns: CommonColumns.columns
 };

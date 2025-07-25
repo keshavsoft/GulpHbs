@@ -37,5 +37,17 @@
         "DisplayName": "VerticalCreate",
         "IconClass": "bi bi-card-list",
         "SpanClass": "text-success"
+    },
+    {
+        "Name": "showWS",
+        "DisplayName": "showWS",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "footerCreateWS",
+        "DisplayName": "footerCreateWS",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-warning"
     }
 ]

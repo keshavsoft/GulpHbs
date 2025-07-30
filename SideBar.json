@@ -23,31 +23,31 @@
                 "DisplayName": "showGroupBy",
                 "IconClass": "bi bi-card-list",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWS",
+                "DisplayName": "showWS",
+                "IconClass": "bi bi-card-list",
+                "SpanClass": "text-success"
             }
         ]
     },
     {
         "Name": "footerCreate",
         "DisplayName": "footerCreate",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success"
+        "IconClass": "bi bi-pencil-square",
+        "SpanClass": "text-light"
     },
     {
         "Name": "verticalCreate",
         "DisplayName": "VerticalCreate",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success"
-    },
-    {
-        "Name": "showWS",
-        "DisplayName": "showWS",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success"
+        "IconClass": "bi bi-vector-pen",
+        "SpanClass": "text-warning"
     },
     {
         "Name": "footerCreateWS",
         "DisplayName": "footerCreateWS",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-warning"
+        "IconClass": "bi bi-archive",
+        "SpanClass": "text-info"
     }
 ]

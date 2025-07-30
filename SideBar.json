@@ -30,6 +30,13 @@
                 "IconClass": "bi bi-card-list",
                 "SpanClass": "text-success"
             }
+            ,
+            {
+                "SubItemName": "showWithTotals",
+                "DisplayName": "showWithTotals",
+                "IconClass": "bi bi-card-list",
+                "SpanClass": "text-success"
+            }
         ]
     },
     {

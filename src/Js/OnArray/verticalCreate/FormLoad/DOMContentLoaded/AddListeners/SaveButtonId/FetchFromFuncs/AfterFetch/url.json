@@ -1,4 +1,4 @@
 {
-    "RedirectToUrl": "show.html",
-    "PresentUrl": "create.html"
+    "RedirectToUrl": "showAsIs.html",
+    "PresentUrl": "verticalCreate.html"
 }

@@ -7,7 +7,7 @@ const StartFunc = () => {
     let LocalConfig = {};
     LocalConfig.onPostBody = StartFuncFromOnPostBody;
     // LocalConfig.autoFocus = "Latitude";
-    LocalConfig.autoFocus = ConfigJson?.DataTableOptions?.Header?.autoFocus
+    // LocalConfig.autoFocus = ConfigJson?.DataTableOptions?.Header?.autoFocus
 
     $table.bootstrapTable(LocalConfig);
 };

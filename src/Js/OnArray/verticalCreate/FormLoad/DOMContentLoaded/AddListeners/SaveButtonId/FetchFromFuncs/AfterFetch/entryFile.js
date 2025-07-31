@@ -5,7 +5,7 @@ let StartFunc = async ({ inResponse }) => {
     let jVarLocalResponse = await inResponse;
 
     if (jVarLocalResponse.status === 200) {
-        let jVarLocalSavedPk = await jVarLocalResponse.json();
+        let jVarLocalSavedPk = await jVarLocalResponse.text();
         Status200({ inRowPk: jVarLocalSavedPk });
     };
 

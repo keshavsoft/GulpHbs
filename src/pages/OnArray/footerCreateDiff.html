@@ -25,13 +25,12 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> SideNavs/sidebar path="../.." currentPage="showWithTotals" currentPageGroup="Totals"}}
-
+    {{> SideNavs/sidebar path="../.." currentPage="footerCreateDiff" currentPageGroup="Balance"}}
 
     <main class="content">
         {{> _topbar path="../.."}}
 
-        {{> _breadCrumb path="../.." page="showWithTotals"}}
+        {{> _breadCrumb path="../.." page="footerCreateDiff" }}
 
         <div id="toolbar">
             <a id="RefreshATagId" href="#"
@@ -46,27 +45,41 @@
                 </svg>
             </a>
         </div>
-
         <div class="card ">
             <div class="card-body">
                 <div class="table-responsive">
+
                     <table id="table" class="table table-bordered table-striped" data-show-footer="true"
-                        data-search="true" data-show-footer="true" data-toolbar="#toolbar">
+                        data-toolbar="#toolbar">
                         <thead>
                             <tr>
-                                {{#each TableColumns}}
-
-                                <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
-                                    footerFormatter}}data-footer-formatter="{{footerFormatter}}" {{/if}} {{#if
-                                    filterControl}}data-filter-control="{{filterControl}}" {{/if}}>
-                                    {{#if title}}
-                                    {{title}}
-                                    {{/if}}
-                                </th>
-
-                                {{/each}}
+                                <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+                                {{> ForTable/_TableHeaderDiff}}
+                                <th data-field="KS-Save">Options</th>
                             </tr>
                         </thead>
+
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                {{> ForTable/_TableFooterDiff}}
+                                <th class="align-top p-1">
+                                    <div class="d-flex flex-column gap-1">
+                                        <button class="btn btn-sm btn-success save-btn" id="TableFooterSaveButtonId"
+                                            data-index="${index}">Save</button>
+                                        <div class="invisible"><small>placeholder</small></div>
+                                    </div>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th></th>
+                                {{> ForTable/_TableFooterDiff}}
+                                <th>
+                                </th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -74,17 +87,12 @@
         {{> _footer path="../.."}}
 
         {{> _scripts path="../.."}}
-         <script>function TotalFormatter(data, k1, k2) {
-            var field = this.field;
-            const LocalReturnValue = data.map(function (row) {
-                return +row[field]
-            }).reduce(function (sum, i) {
-                return sum + i
-            }, 0);
-
-            return LocalReturnValue;
-        };</script>
-        <script type="module" src="../../Js/OnArray/ShowWithTotals/entryFile.js"></script>
+        <script>
+            window.GlobalSerialFormatter = (value, row, index) => {
+                return index + 1;
+            };
+        </script>
+        <script type="module" src="../../Js/OnArray/FooterCreateDiff/entryFile.js"></script>
     </main>
 
 </body>

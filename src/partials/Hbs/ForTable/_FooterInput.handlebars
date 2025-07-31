@@ -1,0 +1,76 @@
+<div class="d-flex flex-column gap-1">
+
+  {{!-- Text Input --}}
+  {{#if isInput}}
+    <input class="form-control"
+           id="HtmlId-{{field}}"
+           name="{{field}}"
+           autocomplete="off"
+           {{#if required}}required{{/if}} />
+    <div class="invisible"><small>placeholder</small></div>
+  {{/if}}
+
+  {{!-- Number Input --}}
+  {{#if isNumber}}
+    <input type="number"
+           class="form-control"
+           id="HtmlId-{{field}}"
+           name="{{field}}"
+           autocomplete="off"
+           {{#if required}}required{{/if}}
+           {{#if numberConfig.step}}step="{{numberConfig.step}}"{{/if}}
+           {{#if numberConfig.min}}min="{{numberConfig.min}}"{{/if}}
+           {{#if numberConfig.max}}max="{{numberConfig.max}}"{{/if}} />
+
+    {{#if ShowTotal}}
+      <small id="HtmlTotalId-{{field}}" class="form-text text-muted">Total: 0</small>
+    {{/if}}
+
+    {{#if ShowDifference}}
+      <div class="text-muted fw-bold">Diff: <span id="HtmlDiffId-{{field}}">0</span></div>
+    {{/if}}
+  {{/if}}
+
+  {{!-- Date Input --}}
+  {{#if isDate}}
+    <input type="date"
+           class="form-control"
+           id="HtmlId-{{field}}"
+           name="{{field}}"
+           autocomplete="off"
+           {{#if required}}required{{/if}}
+           {{#if dateConfig.min}}min="{{dateConfig.min}}"{{/if}}
+           {{#if dateConfig.max}}max="{{dateConfig.max}}"{{/if}} />
+    <div class="invisible"><small>placeholder</small></div>
+  {{/if}}
+
+  {{!-- Select Field --}}
+  {{#if isSelect}}
+    <select name="{{field}}" id="HtmlId-{{field}}" class="form-select">
+      {{#each selectOptions}}
+        <option value="{{this.value}}">{{this.text}}</option>
+      {{/each}}
+    </select>
+    <div class="invisible"><small>placeholder</small></div>
+  {{/if}}
+
+  {{!-- Datalist Input --}}
+  {{#if isDataList}}
+    <input class="form-control"
+           id="HtmlId-{{field}}"
+           name="{{field}}"
+           list="HtmlDLId-{{field}}" />
+    <datalist id="HtmlDLId-{{field}}">
+      {{#each selectOptions}}
+        <option value="{{this.value}}">{{this.text}}</option>
+      {{/each}}
+    </datalist>
+  {{else if isDataListEmpty}}
+    <input class="form-control"
+           id="HtmlId-{{field}}"
+           name="{{field}}"
+           list="HtmlDLEId-{{field}}" />
+    <datalist id="HtmlDLEId-{{field}}"></datalist>
+  {{/if}}
+
+</div>

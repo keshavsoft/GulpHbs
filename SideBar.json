@@ -2,67 +2,82 @@
     {
         "Name": "index",
         "DisplayName": "DashBoard",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success"
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
     },
     {
         "Name": "show",
         "DisplayName": "ShowAll",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success",
+        "IconClass": "bi bi-layout-text-sidebar",
+        "SpanClass": "text-info",
         "isCollapsable": true,
         "SubItems": [
             {
                 "SubItemName": "showAsIs",
                 "DisplayName": "AsIs",
-                "IconClass": "bi bi-card-list",
+                "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             },
             {
                 "SubItemName": "showGroupBy",
-                "DisplayName": "showGroupBy",
-                "IconClass": "bi bi-card-list",
-                "SpanClass": "text-success"
+                "DisplayName": "ShowGroupBy",
+                "IconClass": "bi bi-diagram-3",
+                "SpanClass": "text-warning"
             },
             {
                 "SubItemName": "showWS",
-                "DisplayName": "showWS",
-                "IconClass": "bi bi-card-list",
-                "SpanClass": "text-success"
+                "DisplayName": "ShowWS",
+                "IconClass": "bi bi-globe2",
+                "SpanClass": "text-danger"
+            }
+        ]
+    },
+    {
+        "Name": "Balance",
+        "DisplayName": "Balance",
+        "IconClass": "bi bi-cash-coin",
+        "SpanClass": "text-warning",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "footerCreateDiff",
+                "DisplayName": "FooterCreateDiff",
+                "IconClass": "bi bi-pencil",
+                "SpanClass": "text-info"
             }
         ]
     },
     {
         "Name": "Totals",
         "DisplayName": "Totals",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success",
+        "IconClass": "bi bi-bar-chart-line",
+        "SpanClass": "text-dark",
         "isCollapsable": true,
         "SubItems": [
             {
                 "SubItemName": "showWithTotals",
-                "DisplayName": "showWithTotals",
-                "IconClass": "bi bi-card-list",
+                "DisplayName": "ShowWithTotals",
+                "IconClass": "bi bi-graph-up-arrow",
                 "SpanClass": "text-success"
             }
         ]
     },
     {
         "Name": "footerCreate",
-        "DisplayName": "footerCreate",
-        "IconClass": "bi bi-pencil-square",
-        "SpanClass": "text-light"
+        "DisplayName": "FooterCreate",
+        "IconClass": "bi bi-plus-square",
+        "SpanClass": "text-danger"
     },
     {
         "Name": "verticalCreate",
         "DisplayName": "VerticalCreate",
-        "IconClass": "bi bi-vector-pen",
+        "IconClass": "bi bi-layout-three-columns",
         "SpanClass": "text-warning"
     },
     {
         "Name": "footerCreateWS",
-        "DisplayName": "footerCreateWS",
-        "IconClass": "bi bi-archive",
-        "SpanClass": "text-info"
+        "DisplayName": "FooterCreateWS",
+        "IconClass": "bi bi-gear-wide-connected",
+        "SpanClass": "text-secondary"
     }
 ]

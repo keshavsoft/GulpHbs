@@ -25,13 +25,13 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> SideNavs/sidebar path="../.." currentPage="showWithTotals" currentPageGroup="show"}}
+    {{> SideNavs/sidebar path="../.." currentPage="showWithTotals" currentPageGroup="Totals"}}
 
 
     <main class="content">
         {{> _topbar path="../.."}}
 
-        {{> _breadCrumb path="../.." page="showAsIs"}}
+        {{> _breadCrumb path="../.." page="showWithTotals"}}
 
         <div id="toolbar">
             <a id="RefreshATagId" href="#"

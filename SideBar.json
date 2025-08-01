@@ -79,5 +79,20 @@
         "DisplayName": "FooterCreateWS",
         "IconClass": "bi bi-gear-wide-connected",
         "SpanClass": "text-secondary"
+    },
+    {
+        "Name": "groupBy",
+        "DisplayName": "Group By",
+        "IconClass": "bi bi-layout-text-sidebar",
+        "SpanClass": "text-info",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "groupByColumn",
+                "DisplayName": "Column",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

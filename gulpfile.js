@@ -87,7 +87,8 @@ var templateData = {
     SideBarItems: SideBarItems,
     SideBarForCalender: SideBarForCalender,
     TableColumns: CommonColumns.columns,
-    columns: CommonColumns.columns
+    columns: CommonColumns.columns,
+    DataTableOptions: CommonColumns.DataTableOptions
 };
 
 options = {

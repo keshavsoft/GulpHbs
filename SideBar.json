@@ -94,5 +94,20 @@
                 "SpanClass": "text-success"
             }
         ]
+    },
+    {
+        "Name": "alter",
+        "DisplayName": "Alter",
+        "IconClass": "bi bi-layout-text-sidebar",
+        "SpanClass": "text-info",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "alterWs",
+                "DisplayName": "Column",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

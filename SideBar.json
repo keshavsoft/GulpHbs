@@ -89,7 +89,13 @@
         "SubItems": [
             {
                 "SubItemName": "groupByColumn",
-                "DisplayName": "Column",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+               {
+                "SubItemName": "groupByCount",
+                "DisplayName": "Count",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }

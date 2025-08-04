@@ -83,8 +83,8 @@
     {
         "Name": "groupBy",
         "DisplayName": "Group By",
-        "IconClass": "bi bi-layout-text-sidebar",
-        "SpanClass": "text-info",
+        "IconClass": "bi bi-collection",
+        "SpanClass": "text-dark",
         "isCollapsable": true,
         "SubItems": [
             {

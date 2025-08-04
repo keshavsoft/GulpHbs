@@ -1,48 +1,61 @@
 {
-    "tableName": "GpsTable",
+    "tableName": "JournalsTable",
     "columns": [
         {
-            "field": "DateTime",
-            "title": "Date Time",
-            "isInput": true
-        },
-        {
-            "field": "TreeName",
-            "title": "Tree Name",
-            "isInput": true,
-            "filterControl": "input"
-        },
-        {
-            "field": "Latitude",
-            "isInput": true,
-            "title": "Latitude",
-            "type": "STRING"
-        },
-        {
-            "field": "Longitude",
-            "title": "Longitude",
-            "isInput": true,
-            "type": "STRING"
-        },
-        {
-            "field": "UserName",
-            "title": "UserName",
+            "field": "AccountName",
+            "title": "Account Name",
             "isInput": true,
             "filterControl": "select"
         },
         {
-            "field": "pk",
-            "title": "pk",
-            "isInput": true,
-            "type": "STRING"
+            "field": "Date",
+            "title": "Date",
+            "isDate": true,
+            "dateConfig": {
+                "min": "2025-07-01",
+                "max": "2025-07-25"
+            }
+        },
+        {
+            "field": "Description",
+            "title": "Description",
+            "isInput": true
+        },
+        {
+            "field": "Credit",
+            "title": "Credit",
+            "type": "number",
+            "isNumber": true,
+            "filterControl": "select",
+            "showRupee": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true,
+            "align": "right"
+        },
+        {
+            "field": "Debit",
+            "title": "Debit",
+            "type": "number",
+            "isNumber": true,
+            "filterControl": "select",
+            "showRupee": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true,
+            "align": "right"
         }
     ],
     "data": [],
-    "Vertical": [],
-    "DataTableOptions": {
-        "Header": {
-            "autoFocus": "TreeName",
-            "GroupByColumn": "UserName"
-        }
-    }
+    "Vertical": []
 }

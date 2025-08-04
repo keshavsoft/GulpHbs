@@ -57,7 +57,9 @@
                                 {{#each TableColumns}}
                                 <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
                                     footerFormatter}}data-footer-formatter="{{footerFormatter}}" {{/if}} {{#if
-                                    filterControl}}data-filter-control="{{filterControl}}" {{/if}}>
+                                    filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if
+                                    align}}data-align="{{align}}" {{/if}} {{#if
+                                    showRupee}}data-formatter="window.RupeeFormatter" {{/if}}>
                                     {{#if title}}
                                     {{title}}
                                     {{/if}}
@@ -75,15 +77,19 @@
         {{> _scripts path="../.."}}
         <script>function TotalFormatter(data, k1, k2) {
                 var field = this.field;
-                const LocalReturnValue = data.map(function (row) {
-                    return +row[field]
-                }).reduce(function (sum, i) {
-                    return sum + i
-                }, 0);
+                console.log("field : ", field, this, k1, k2);
 
-                return LocalReturnValue;
+                const LocalReturnValue = data
+                    .map(row => +row[field])
+                    .reduce((sum, i) => sum + i, 0);
+
+                // Format with rupee symbol and two decimals
+                return `₹ ${LocalReturnValue.toFixed(2)}`;
+            };
+            window.RupeeFormatter = (value) => {
+                if (value === null || value === undefined || value === '') return '';
+                return `₹ ${parseFloat(value).toFixed(2)}`;
             };</script>
-
         <script type="module" src="../../Js/OnArray/ShowGroupBy/entryFile.js"></script>
     </main>
 

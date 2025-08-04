@@ -55,7 +55,8 @@
                                 <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
                                 {{#each TableColumns}}
 
-                                <th data-field="{{field}}">
+                                <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
+                                    showRupee}}data-formatter="window.RupeeFormatter" {{/if}}>
                                     {{title}}
                                 </th>
                                 {{/each}}
@@ -72,6 +73,10 @@
         <script>
             window.GlobalSerialFormatter = (value, row, index) => {
                 return index + 1;
+            };
+            window.RupeeFormatter = (value) => {
+                if (value === null || value === undefined || value === '') return '';
+                return `₹ ${parseFloat(value).toFixed(2)}`;
             };
         </script>
 

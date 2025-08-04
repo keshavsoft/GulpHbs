@@ -8,8 +8,8 @@
     {
         "Name": "show",
         "DisplayName": "ShowAll",
-        "IconClass": "bi bi-layout-text-sidebar",
-        "SpanClass": "text-info",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
         "isCollapsable": true,
         "SubItems": [
             {
@@ -20,13 +20,13 @@
             },
             {
                 "SubItemName": "showGroupBy",
-                "DisplayName": "ShowGroupBy",
+                "DisplayName": "GroupBy",
                 "IconClass": "bi bi-diagram-3",
                 "SpanClass": "text-warning"
             },
             {
                 "SubItemName": "showWS",
-                "DisplayName": "ShowWS",
+                "DisplayName": "WithSerial",
                 "IconClass": "bi bi-globe2",
                 "SpanClass": "text-danger"
             }
@@ -35,8 +35,8 @@
     {
         "Name": "Balance",
         "DisplayName": "Balance",
-        "IconClass": "bi bi-cash-coin",
-        "SpanClass": "text-warning",
+        "IconClass": "bi bi-duffle",
+        "SpanClass": "text-dark",
         "isCollapsable": true,
         "SubItems": [
             {
@@ -50,13 +50,13 @@
     {
         "Name": "Totals",
         "DisplayName": "Totals",
-        "IconClass": "bi bi-bar-chart-line",
-        "SpanClass": "text-dark",
+        "IconClass": "bi bi-cloud-plus",
+        "SpanClass": "text-warning",
         "isCollapsable": true,
         "SubItems": [
             {
                 "SubItemName": "showWithTotals",
-                "DisplayName": "ShowWithTotals",
+                "DisplayName": "WithTotals",
                 "IconClass": "bi bi-graph-up-arrow",
                 "SpanClass": "text-success"
             }
@@ -65,20 +65,20 @@
     {
         "Name": "footerCreate",
         "DisplayName": "FooterCreate",
-        "IconClass": "bi bi-plus-square",
-        "SpanClass": "text-danger"
+        "IconClass": "bi bi-pencil-fill",
+        "SpanClass": "text-dark"
     },
     {
         "Name": "verticalCreate",
         "DisplayName": "VerticalCreate",
-        "IconClass": "bi bi-layout-three-columns",
-        "SpanClass": "text-warning"
+        "IconClass": "bi bi-layout-sidebar",
+        "SpanClass": "text-info"
     },
     {
         "Name": "footerCreateWS",
         "DisplayName": "FooterCreateWS",
-        "IconClass": "bi bi-gear-wide-connected",
-        "SpanClass": "text-secondary"
+        "IconClass": "bi bi-braces-asterisk",
+        "SpanClass": "text-warning"
     },
     {
         "Name": "groupBy",
@@ -93,7 +93,7 @@
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             },
-               {
+            {
                 "SubItemName": "groupByCount",
                 "DisplayName": "Count",
                 "IconClass": "bi bi-eye",
@@ -104,8 +104,8 @@
     {
         "Name": "alter",
         "DisplayName": "Alter",
-        "IconClass": "bi bi-layout-text-sidebar",
-        "SpanClass": "text-info",
+        "IconClass": "bi bi-pencil-square",
+        "SpanClass": "text-success",
         "isCollapsable": true,
         "SubItems": [
             {

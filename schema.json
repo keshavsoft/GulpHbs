@@ -5,7 +5,8 @@
             "field": "AccountName",
             "title": "Account Name",
             "isInput": true,
-            "filterControl": "select"
+            "filterControl": "select",
+            "autoFocus": true
         },
         {
             "field": "Date",

@@ -33,6 +33,21 @@
         ]
     },
     {
+        "Name": "Totals",
+        "DisplayName": "Totals",
+        "IconClass": "bi bi-cloud-plus",
+        "SpanClass": "text-warning",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "showWithTotals",
+                "DisplayName": "WithTotals",
+                "IconClass": "bi bi-graph-up-arrow",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
         "Name": "Balance",
         "DisplayName": "Balance",
         "IconClass": "bi bi-duffle",
@@ -48,17 +63,29 @@
         ]
     },
     {
-        "Name": "Totals",
-        "DisplayName": "Totals",
-        "IconClass": "bi bi-cloud-plus",
-        "SpanClass": "text-warning",
+        "Name": "filter",
+        "DisplayName": "filterShow",
+        "IconClass": "bi bi-file-plus",
+        "SpanClass": "text-secondary",
         "isCollapsable": true,
         "SubItems": [
             {
-                "SubItemName": "showWithTotals",
-                "DisplayName": "WithTotals",
-                "IconClass": "bi bi-graph-up-arrow",
+                "SubItemName": "filterAccountNameShow",
+                "DisplayName": "AccountName",
+                "IconClass": "bi bi-person-lines-fill",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "filterCreditShow",
+                "DisplayName": "Credit",
+                "IconClass": "bi bi-cash-coin",
+                "SpanClass": "text-info"
+            },
+            {
+                "SubItemName": "filterDebitShow",
+                "DisplayName": "Debit",
+                "IconClass": "bi bi-credit-card",
+                "SpanClass": "text-danger"
             }
         ]
     },

@@ -142,5 +142,20 @@
                 "SpanClass": "text-success"
             }
         ]
+    },
+    {
+        "Name": "delete",
+        "DisplayName": "Delete",
+        "IconClass": "bi bi-trash",
+        "SpanClass": "text-danger",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "delete",
+                "DisplayName": "Delete",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

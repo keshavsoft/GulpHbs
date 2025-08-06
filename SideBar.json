@@ -146,6 +146,12 @@
                 "DisplayName": "Totals",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "alterDiff",
+                "DisplayName": "Diff",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
             }
         ]
     },
@@ -165,6 +171,12 @@
             {
                 "SubItemName": "deleteTotals",
                 "DisplayName": "Totals",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "deleteDiff",
+                "DisplayName": "Diff",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }

@@ -25,13 +25,13 @@
 <body>
     {{> _nav path="../.."}}
 
-    {{> SideNavs/sidebar path="../.." currentPage="alterTotals" currentPageGroup="alter"}}
+    {{> SideNavs/sidebar path="../.." currentPage="alterDiff" currentPageGroup="alter"}}
 
 
     <main class="content">
         {{> _topbar path="../.."}}
 
-        {{> _breadCrumb path="../.." page="alterTotals"}}
+        {{> _breadCrumb path="../.." page="alterDiff"}}
 
         <div id="toolbar">
             <a id="RefreshATagId" href="#"
@@ -54,9 +54,21 @@
                     <table id="table" class="table table-bordered table-striped" data-show-footer="true"
                         data-toolbar="#toolbar">
                         <thead>
-                            {{> ForTable/_TableRowAlterTotal}}
+                            <tr>
+                                <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+                                {{> ForTable/_AlterHeaderDiff}}
+                            </tr>
                         </thead>
 
+                        <tfoot>
+
+                            <tr>
+                                <th></th>
+                                {{> ForTable/_AlterFooterDiff}}
+
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -64,23 +76,14 @@
         {{> _footer path="../.."}}
 
         {{> _scripts path="../.."}}
-        <script>function TotalFormatter(data, k1, k2) {
-                var field = this.field;
-
-                const LocalReturnValue = data
-                    .map(row => row[field])
-                    .filter(val => val !== null && val !== '' && val !== undefined)
-                    .map(val => +val)
-                    .reduce((sum, i) => sum + i, 0);
-
-                // Format with rupee symbol and two decimals
-                return `₹ ${LocalReturnValue.toFixed(2)}`;
-            }
-
+        <script>
             window.GlobalSerialFormatter = (value, row, index) => {
                 return index + 1;
             };
-
+            window.RupeeFormatter = (value) => {
+                if (value === null || value === undefined || value === '') return '';
+                return `₹ ${parseFloat(value).toFixed(2)}`;
+            };
             window.GlobalAlterFormatter = (value, row, index) => {
                 return [
                     `<a href="#" class="link btn" title="Edit">`,
@@ -89,12 +92,10 @@
 
                 ].join('');
             };
-            window.RupeeFormatter = (value) => {
-                if (value === null || value === undefined || value === '') return '';
-                return `₹ ${parseFloat(value).toFixed(2)}`;
-            };</script>
+        </script>
+        </script>
 
-        <script type="module" src="../../Js/OnArray/AlterTotals/entryFile.js"></script>
+        <script type="module" src="../../Js/OnArray/AlterDiff/entryFile.js"></script>
     </main>
 
 </body>

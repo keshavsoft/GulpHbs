@@ -140,6 +140,12 @@
                 "DisplayName": "Column",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "alterTotals",
+                "DisplayName": "Totals",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
             }
         ]
     },
@@ -153,6 +159,12 @@
             {
                 "SubItemName": "delete",
                 "DisplayName": "Delete",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "deleteTotals",
+                "DisplayName": "Totals",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }

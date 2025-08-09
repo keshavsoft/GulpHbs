@@ -9,6 +9,18 @@
         "Name": "simple",
         "DisplayName": "simple",
         "IconClass": "bi bi-card-list",
-        "SpanClass": "text-warning"
+        "SpanClass": "text-primary"
+    },
+    {
+        "Name": "fullScreen",
+        "DisplayName": "FullScreen",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-dark"
+    },
+    {
+        "Name": "withAdd",
+        "DisplayName": "WithAdd",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-secondary"
     }
 ]

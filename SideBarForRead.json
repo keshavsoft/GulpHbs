@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "setSingleColumns",
+        "DisplayName": "setSingleColumns",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-warning"
+    },
+    {
+        "Name": "show",
+        "DisplayName": "show",
+        "IconClass": "bi bi-card-list",
+        "SpanClass": "text-warning"
+    }
+]

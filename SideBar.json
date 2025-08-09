@@ -6,12 +6,6 @@
         "SpanClass": "text-danger"
     },
     {
-        "Name": "index",
-        "DisplayName": "Parent",
-        "IconClass": "bi bi-arrow-90deg-left",
-        "SpanClass": "text-warning"
-    },
-    {
         "Name": "show",
         "DisplayName": "ShowAll",
         "IconClass": "bi bi-eye",

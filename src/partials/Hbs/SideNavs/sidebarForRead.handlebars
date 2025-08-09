@@ -53,10 +53,30 @@
                     </span>
                     <span class="sidebar-text">Parent</span>
                 </a>
+            </li><li class="nav-item">
+                <a href="setSingleColumns.html" class="nav-link d-flex justify-content-between">
+                    <span>
+                        <span class="sidebar-icon text-info">
+                            <i class="bi bi-layout-sidebar-inset"></i>
+                        </span>
+                        <span class="sidebar-text">setSingleColumns</span>
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+            <li class="nav-item">
+                <a href="show.html" class="nav-link d-flex justify-content-between">
+                    <span>
+                        <span class="sidebar-icon text-info">
+                            <i class="bi bi-table"></i>
+                        </span>
+                        <span class="sidebar-text">Show</span>
+                    </span>
+                </a>
             </li>
             
 
-            {{#each SideBarForCalender}}
+            {{#each SideBarForRead}}
             {{#if isCollapsable}}
             {{> SideNavs/Collapsable/_CollapseItem
             Name=Name

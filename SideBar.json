@@ -181,5 +181,20 @@
                 "SpanClass": "text-success"
             }
         ]
+    },
+    {
+        "Name": "download",
+        "DisplayName": "Download",
+        "IconClass": "bi bi-trash",
+        "SpanClass": "text-danger",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "downloadAll",
+                "DisplayName": "All",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

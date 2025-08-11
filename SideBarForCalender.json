@@ -2,25 +2,25 @@
     {
         "Name": "index",
         "DisplayName": "DashBoard",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-success"
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
     },
     {
         "Name": "simple",
         "DisplayName": "simple",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-primary"
+        "IconClass": "bi bi-activity",
+        "SpanClass": "text-muted"
     },
     {
         "Name": "fullScreen",
         "DisplayName": "FullScreen",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-dark"
+        "IconClass": "bi bi-fullscreen",
+        "SpanClass": "text-info"
     },
     {
         "Name": "withAdd",
         "DisplayName": "WithAdd",
-        "IconClass": "bi bi-card-list",
+        "IconClass": "bi bi-file-earmark-plus",
         "SpanClass": "text-secondary"
     }
 ]

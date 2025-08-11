@@ -2,19 +2,19 @@
     {
         "Name": "index",
         "DisplayName": "DashBoard",
-        "IconClass": "bi bi-card-list",
+        "IconClass": "bi bi-speedometer2",
         "SpanClass": "text-success"
     },
     {
         "Name": "setSingleColumns",
         "DisplayName": "setSingleColumns",
-        "IconClass": "bi bi-card-list",
+        "IconClass": "bi bi-columns",
         "SpanClass": "text-warning"
     },
     {
         "Name": "show",
         "DisplayName": "show",
-        "IconClass": "bi bi-card-list",
-        "SpanClass": "text-warning"
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success"
     }
 ]

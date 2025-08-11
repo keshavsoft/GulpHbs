@@ -185,8 +185,8 @@
     {
         "Name": "download",
         "DisplayName": "Download",
-        "IconClass": "bi bi-trash",
-        "SpanClass": "text-danger",
+        "IconClass": "bi bi-download",
+        "SpanClass": "text-success",
         "isCollapsable": true,
         "SubItems": [
             {

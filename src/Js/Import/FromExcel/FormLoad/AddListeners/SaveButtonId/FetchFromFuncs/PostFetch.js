@@ -1,5 +1,6 @@
 import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/EntryFile.js";
-import UrlJson from "../../../../../Config.json" with { type: "json" };
+// import UrlJson from "../../../../../Config.json" with { type: "json" };
+import UrlJson from "../../../../../../OnArray/Config.json" with { type: "json" };
 
 let StartFunc = async () => {
     let LocaltableName = UrlJson.TableName;

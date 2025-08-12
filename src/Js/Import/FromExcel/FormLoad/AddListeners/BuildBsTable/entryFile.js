@@ -4,9 +4,9 @@ import optionsJson from './options.json' with {type: 'json'};
 const StartFunc = () => {
     var $table = $('#table');
 
-    ForColumns({ inColumns: optionsJson.columns });
+    // ForColumns({ inColumns: optionsJson.columns });
 
-    $table.bootstrapTable(optionsJson);
+    // $table.bootstrapTable(optionsJson);
 };
 
 export { StartFunc };

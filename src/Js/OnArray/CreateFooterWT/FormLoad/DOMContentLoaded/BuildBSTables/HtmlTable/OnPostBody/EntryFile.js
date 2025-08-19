@@ -1,10 +1,14 @@
 import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSaveButtonId/EntryFile.js";
 
-let StartFunc = (inData, inOptions) => {
+let StartFunc = () => {
     StartFuncTableFooterSaveButtonId();
-    console.log("aaaaaaaaa : ", inData);
 
-    table.querySelector("tfoot input").focus();
+    setTimeout(() => {
+        let $autoFocusInput = $("#table tfoot").find("input[autofocus], select[autofocus], textarea[autofocus]");
+        if ($autoFocusInput.length) {
+            $autoFocusInput.trigger("focus");
+        }
+    }, 1000);
 };
 
 export { StartFunc };

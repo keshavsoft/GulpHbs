@@ -5,9 +5,9 @@ let StartFunc = ({ inResponseAsJson }) => {
 
     $table.bootstrapTable("load", inResponseAsJson);
 
-    let columns = $table.bootstrapTable('getOptions').columns[0];
+    // let columns = $table.bootstrapTable('getOptions').columns[0];
 
-    ForTotals({ inColumns: columns, inData: inResponseAsJson });
+    // ForTotals({ inColumns: columns, inData: inResponseAsJson });
 };
 
 export { StartFunc };

@@ -64,7 +64,7 @@
     },
     {
         "Name": "filter",
-        "DisplayName": "filterShow",
+        "DisplayName": "FilterShow",
         "IconClass": "bi bi-file-plus",
         "SpanClass": "text-secondary",
         "isCollapsable": true,
@@ -97,14 +97,14 @@
         "isCollapsable": true,
         "SubItems": [
             {
-                "SubItemName": "footerCreateWT",
-                "DisplayName": "FooterCreateWT",
+                "SubItemName": "createFooterWT",
+                "DisplayName": "CreateFooterWT",
                 "IconClass": "bi bi-pencil-fill",
                 "SpanClass": "text-dark"
             },
             {
-                "SubItemName": "footerCreateWS",
-                "DisplayName": "FooterCreateWS",
+                "SubItemName": "createFooterWS",
+                "DisplayName": "CreateFooterWS",
                 "IconClass": "bi bi-braces-asterisk",
                 "SpanClass": "text-warning"
             },

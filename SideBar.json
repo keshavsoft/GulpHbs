@@ -90,22 +90,31 @@
         ]
     },
     {
-        "Name": "footerCreate",
-        "DisplayName": "FooterCreate",
+        "Name": "Create",
+        "DisplayName": "Create",
         "IconClass": "bi bi-pencil-fill",
-        "SpanClass": "text-dark"
-    },
-    {
-        "Name": "verticalCreate",
-        "DisplayName": "VerticalCreate",
-        "IconClass": "bi bi-layout-sidebar",
-        "SpanClass": "text-info"
-    },
-    {
-        "Name": "footerCreateWS",
-        "DisplayName": "FooterCreateWS",
-        "IconClass": "bi bi-braces-asterisk",
-        "SpanClass": "text-warning"
+        "SpanClass": "text-dark",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "footerCreateWT",
+                "DisplayName": "FooterCreateWT",
+                "IconClass": "bi bi-pencil-fill",
+                "SpanClass": "text-dark"
+            },
+            {
+                "SubItemName": "footerCreateWS",
+                "DisplayName": "FooterCreateWS",
+                "IconClass": "bi bi-braces-asterisk",
+                "SpanClass": "text-warning"
+            },
+            {
+                "SubItemName": "verticalCreate",
+                "DisplayName": "VerticalCreate",
+                "IconClass": "bi bi-layout-sidebar",
+                "SpanClass": "text-info"
+            }
+        ]
     },
     {
         "Name": "groupBy",

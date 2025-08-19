@@ -71,6 +71,7 @@ const paths = {
         scss: "./src/scss",
         node_modules: "./node_modules/",
         vendor: "./vendor",
+        hbsPath: "./src/partials/Hbs"
     },
     temp: {
         base: "./.temp/",
@@ -98,7 +99,7 @@ options = {
     partials: {
         footer: '<footer>the end</footer>'
     },
-    batch: ['./src/partials/Hbs'],
+    batch: [paths.src.hbsPath],
     helpers: {
         capitals: function (str) {
             return str.toUpperCase();
@@ -178,20 +179,6 @@ gulp.task("html", function () {
 
             console.log("aaaaaaaaaaaa : ", path);
         }))
-        .pipe(gulp.dest(paths.temp.html))
-        .pipe(browserSync.stream());
-});
-
-gulp.task("html1", function () {
-    return gulp
-        .src([paths.src.html])
-        .pipe(
-            fileinclude({
-                prefix: "@@",
-                basepath: "./src/partials/",
-                context: getFileIncludeContext("production"),
-            })
-        )
         .pipe(gulp.dest(paths.temp.html))
         .pipe(browserSync.stream());
 });

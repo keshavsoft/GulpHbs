@@ -28,77 +28,18 @@
     {{> SideNavs/sidebarForCalender path="../.." currentPage="fullScreen"
     currentPageGroup="fullScreen"}}
 
-
     <main class="content">
-        {{> _topbar path="../.."}}
-
-        {{> _breadCrumb path="../.." page="fullScreen"}}
-
-        <div class="card ">
-            <div class="card-body">
-                <div class="row mt-2">
-                    <div class="col-7">
-                        <div id='calendar'></div>
-                    </div>
-                    <div class="col">
-                    </div>
-                </div>
+        <div class="row mt-4">
+            <div class="col-8">
+                <div id='calendar'></div>
             </div>
         </div>
-        {{> _footer path="../.."}}
 
         {{> _scriptsForCalendar path="../.."}}
         <script>
             let jVarCommonCalendar = null;
-
-            document.addEventListener('DOMContentLoaded', function () {
-
-                // jFAddYesterday();
-                // jFAddToday();
-                // jFAddTomorrow();
-            });
-
-            const jF1 = () => {
-                calendar.addEvent({
-                    title: "3rd",
-                    start: '2025-03-19',
-                    className: 'bg-success'
-                });
-            };
-            let yourDate = new Date();
-            yourDate.toISOString().split('T')[0];
-
-            const jFAddYesterday = () => {
-                var jVarLocalYesterday = new Date(Date.now() - 86400000);
-
-                jVarCommonCalendar.addEvent({
-                    title: "1st",
-                    start: jVarLocalYesterday.toISOString().split('T')[0],
-                    className: 'bg-success'
-                });
-            };
-
-            const jFAddToday = () => {
-                var jVarLocalYesterday = new Date();
-
-                jVarCommonCalendar.addEvent({
-                    title: "2nd",
-                    start: jVarLocalYesterday.toISOString().split('T')[0],
-                    className: 'bg-primary'
-                });
-            };
-
-            const jFAddTomorrow = () => {
-                var jVarLocalYesterday = new Date(Date.now() + 86400000);
-
-                jVarCommonCalendar.addEvent({
-                    title: "3rd",
-                    start: jVarLocalYesterday.toISOString().split('T')[0],
-                    className: 'bg-danger'
-                });
-            };
-
         </script>
+
         <script type="module" src="../../Js/Calendar/CommonFuncs/TopbarWithEntry/entryFile.js"></script>
         <script type="module" src="../../Js/Calendar/FullScreen/entryFile.js"></script>
     </main>

@@ -25,13 +25,13 @@
 <body>
     {{> _nav path="../.."}}
 
-   {{> SideNavs/sidebar path="../.." currentPage="createFooterWS" currentPageGroup="Create"}}
+    {{> SideNavs/sidebar path="../.." currentPage="createFooterWS" currentPageGroup="Create"}}
 
     <main class="content">
         {{> _topbar path="../.."}}
 
         {{> _breadCrumb path="../.." page="createFooterWS"}}
-        
+
         <div id="toolbar">
             <a id="RefreshATagId" href="#"
                 class="btn d-flex justify-content-center align-items-center RefreshBSTableClass bg-gray-700 text-white"
@@ -69,6 +69,10 @@
             window.RupeeFormatter = (value) => {
                 if (value === null || value === undefined || value === '') return '';
                 return `₹ ${parseFloat(value).toFixed(2)}`;
+            };
+
+            window.GlobalSerialFormatter = (value, row, index) => {
+                return index + 1;
             };
         </script>
 

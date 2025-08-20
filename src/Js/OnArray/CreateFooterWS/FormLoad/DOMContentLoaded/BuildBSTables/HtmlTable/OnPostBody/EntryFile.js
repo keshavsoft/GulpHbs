@@ -2,13 +2,13 @@ import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSave
 
 let StartFunc = () => {
     StartFuncTableFooterSaveButtonId();
+    // debugger;
+    let $autoFocusInput = $("#table tfoot").find("input[autofocus], select[autofocus], textarea[autofocus]");
+    // console.log("autoFocusInput : ", $autoFocusInput);
 
-    setTimeout(() => {
-        let $autoFocusInput = $("#table tfoot").find("input[autofocus], select[autofocus], textarea[autofocus]");
-        if ($autoFocusInput.length) {
-            $autoFocusInput.trigger("focus");
-        }
-    }, 1000);
+    if ($autoFocusInput.length > 0) {
+        $autoFocusInput.trigger("focus");
+    };
 };
 
 export { StartFunc };

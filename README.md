@@ -223,3 +223,7 @@ import started
 - 1.4.6
 
 version started for src folder
+
+- 1.4.7
+
+createFooterWS focus working good

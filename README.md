@@ -227,3 +227,7 @@ version started for src folder
 - 1.4.7
 
 createFooterWS focus working good
+
+- 1.4.8
+
+createFooterWS focus working good, but remove # and add autofocus

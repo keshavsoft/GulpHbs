@@ -56,7 +56,7 @@
                         <thead>
                             <tr>
                                 <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
-                                {{> TableHeader/_DeleteHeaderDiff}}
+                                {{> ForTable/Header/_DeleteHeaderDiff}}
                             </tr>
                         </thead>
 
@@ -64,7 +64,7 @@
 
                             <tr>
                                 <th></th>
-                                {{> ForTable/_DeleteFooterDiff}}
+                                {{> ForTable/Footer/_DeleteFooterDiff}}
 
                             </tr>
 
@@ -93,7 +93,7 @@
                 ].join('');
             };
         </script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="module" src="../../Js/OnArray/DeleteDiff/entryFile.js"></script>
     </main>
 

@@ -1,24 +1,37 @@
 {
-    "tableName": "TokenTable",
+    "tableName": "UsersTable",
     "columns": [
         {
-            "field": "Secret",
-            "title": "Secret",
+            "field": "UserName",
+            "title": "UserName",
             "unique": true,
+            "type": "text",
+            "isInput": true
+        },
+        {
+            "field": "Password",
+            "title": "Password",
             "type": "text",
             "isInput": true
         }
     ],
     "data": [
         {
-            "Secret": 9848163021
+            "UserName": "Keshav",
+            "Password": 9848163021
         }
     ],
     "Vertical": [
         {
-            "field": "Secret",
-            "title": "Secret",
+            "field": "UserName",
+            "title": "UserName",
             "unique": true,
+            "type": "text",
+            "isInput": true
+        },
+        {
+            "field": "Password",
+            "title": "Password",
             "type": "text",
             "isInput": true
         }

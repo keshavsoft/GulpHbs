@@ -235,3 +235,7 @@ createFooterWS focus working good, but remove # and add autofocus
 - 1.4.9
 
 createFooterWS focus working good, but remove # and add autofocus
+
+### 1.4.10
+
+- removed logs

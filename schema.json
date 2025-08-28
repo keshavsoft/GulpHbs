@@ -1,62 +1,31 @@
 {
-    "tableName": "JournalsTable",
+    "tableName": "TokenTable",
     "columns": [
         {
-            "field": "AccountName",
-            "title": "Account Name",
-            "isInput": true,
-            "filterControl": "select",
-            "autoFocus": true
-        },
-        {
-            "field": "Date",
-            "title": "Date",
-            "isDate": true,
-            "dateConfig": {
-                "min": "2025-07-01",
-                "max": "2025-07-25"
-            }
-        },
-        {
-            "field": "Description",
-            "title": "Description",
+            "field": "Secret",
+            "title": "Secret",
+            "unique": true,
+            "type": "text",
             "isInput": true
-        },
-        {
-            "field": "Credit",
-            "title": "Credit",
-            "type": "number",
-            "isNumber": true,
-            "filterControl": "select",
-            "showRupee": true,
-            "numberConfig": {
-                "step": "0.01",
-                "min": "0",
-                "max": "999999999"
-            },
-            "footerFormatter": "TotalFormatter",
-            "ShowTotal": true,
-            "ShowDifference": true,
-            "align": "right"
-        },
-        {
-            "field": "Debit",
-            "title": "Debit",
-            "type": "number",
-            "isNumber": true,
-            "filterControl": "select",
-            "showRupee": true,
-            "numberConfig": {
-                "step": "0.01",
-                "min": "0",
-                "max": "999999999"
-            },
-            "footerFormatter": "TotalFormatter",
-            "ShowTotal": true,
-            "ShowDifference": true,
-            "align": "right"
         }
     ],
-    "data": [],
-    "Vertical": []
+    "data": [
+        {
+            "Secret": 9848163021
+        }
+    ],
+    "Vertical": [
+        {
+            "field": "Secret",
+            "title": "Secret",
+            "unique": true,
+            "type": "text",
+            "isInput": true
+        }
+    ],
+    "DataTableOptions": {
+        "Header": {
+            "autoFocus": "title"
+        }
+    }
 }

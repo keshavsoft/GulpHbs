@@ -6,7 +6,8 @@
             "title": "UserName",
             "unique": true,
             "type": "text",
-            "isInput": true
+            "isInput": true,
+            "isAutoFocus": true
         },
         {
             "field": "Password",

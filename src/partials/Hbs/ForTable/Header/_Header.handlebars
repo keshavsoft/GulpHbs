@@ -2,10 +2,13 @@
     <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
 
     {{#each columns}}
-    <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
-        filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if align}}data-align="{{align}}" {{/if}} {{#if
-        showRupee}}data-formatter="window.RupeeFormatter" {{/if}}{{#if (isVisible this)}}
-        data-visible={{visible}}{{/if}}>
+    <th data-field="{{field}}"
+     {{#if align}} data-align="{{align}}" {{/if}}
+      {{#if filterControl}}data-filter-control="{{filterControl}}" {{/if}}
+       {{#if align}}data-align="{{align}}" {{/if}}
+        {{#if showRupee}}data-formatter="window.RupeeFormatter" {{/if}}
+        {{#if (isVisible this)}} data-visible={{visible}}{{/if}}>
+        
         {{title}}
     </th>
     {{/each}}

@@ -4,6 +4,7 @@
     "toolbar": "#toolbar",
     "searchable": true,
     "search": true,
+    "primaryKey": "_id",
     "columns": [
         {
             "field": "title",

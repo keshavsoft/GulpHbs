@@ -6,7 +6,7 @@
 
   {{#if isInput}}
   <input type="text" class="form-control" id="HtmlId-{{field}}" name="{{field}}" autocomplete="off" {{#if
-    autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} />
+    autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} {{#if isAutoFocus}} autofocus {{/if}}/>
   {{/if}}
 
   {{#if isDate}}

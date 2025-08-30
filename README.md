@@ -243,3 +243,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.11
 
 - autofocus working good
+
+### 1.4.12
+
+- sign in redirect working

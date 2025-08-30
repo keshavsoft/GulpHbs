@@ -1,1 +1,3 @@
-{"PostendPoint":" http://localhost:3000/Users/Generate"}
+{
+    "PostendPoint": "/Users/Generate"
+}

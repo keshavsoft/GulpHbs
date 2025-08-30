@@ -1,4 +1,4 @@
 {
-    "RedirectToUrl": "../../../../../../../../../../../V1/dist/pages/Protected/index.html",
+    "RedirectToUrl": "../Protected/showWS.html",
     "PresentUrl": "sign-in.html"
 }

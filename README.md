@@ -251,3 +251,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.13
 
 - protected changed to sv1
+
+### 1.4.14
+
+- protected js perfect in gulp

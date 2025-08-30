@@ -1,40 +1,75 @@
 {
-    "tableName": "UsersTable",
+    "tableName": "TasksTable",
     "columns": [
         {
-            "field": "UserName",
-            "title": "UserName",
+            "field": "title",
+            "title": "Title",
             "unique": true,
             "type": "text",
             "isInput": true,
             "isAutoFocus": true
         },
         {
-            "field": "Password",
-            "title": "Password",
-            "type": "text",
-            "isInput": true
-        }
-    ],
-    "data": [
+            "field": "start",
+            "title": "Start Date",
+            "unique": false,
+            "type": "date",
+            "isDate": true
+        },
         {
-            "UserName": "Keshav",
-            "Password": 9848163021
+            "field": "className",
+            "title": "Class Name",
+            "unique": false,
+            "type": "text",
+            "isInput": false,
+            "isSelect": false,
+            "isDataList": true,
+            "selectOptions": [
+                {
+                    "value": "bg-primary",
+                    "text": "bg-primary"
+                },
+                {
+                    "value": "bg-success",
+                    "text": "bg-success"
+                }
+            ]
         }
     ],
+    "data": [],
     "Vertical": [
         {
-            "field": "UserName",
-            "title": "UserName",
+            "field": "title",
+            "title": "Title",
             "unique": true,
             "type": "text",
             "isInput": true
         },
         {
-            "field": "Password",
-            "title": "Password",
-            "type": "text",
+            "field": "start",
+            "title": "Start Date",
+            "unique": false,
+            "type": "date",
             "isInput": true
+        },
+        {
+            "field": "className",
+            "title": "Class Name",
+            "unique": false,
+            "type": "text",
+            "isInput": false,
+            "isSelect": false,
+            "isDataList": true,
+            "selectOptions": [
+                {
+                    "value": "bg-primary",
+                    "text": "bg-primary"
+                },
+                {
+                    "value": "bg-success",
+                    "text": "bg-success"
+                }
+            ]
         }
     ],
     "DataTableOptions": {

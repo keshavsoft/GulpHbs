@@ -1,5 +1,5 @@
 {
-    "TableName": "/V1/$TableName",
+    "TableName": "/SV1/$TableName",
     "showFooter": true,
     "toolbar": "#toolbar",
     "searchable": true,

@@ -11,6 +11,7 @@ const LocalFuncForKeyPresent = (inObject, inKey) => {
 };
 
 let options = {
+    path2: "../..",
     ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
     partials: {
         footer: '<footer>the end</footer>'

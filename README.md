@@ -259,3 +259,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.15
 
 - protected showws js hooked correct
+
+### 1.4.16
+
+- sign in background image perfect

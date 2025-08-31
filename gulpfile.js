@@ -91,7 +91,8 @@ var templateData = {
     TableColumns: CommonColumns.columns,
     columns: CommonColumns.columns,
     DataTableOptions: CommonColumns.DataTableOptions,
-    SideBarForImport: CommonSideBarsImportJson
+    SideBarForImport: CommonSideBarsImportJson,
+    pathFromGulp: "../.."
 };
 
 options = {

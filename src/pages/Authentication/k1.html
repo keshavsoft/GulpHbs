@@ -19,7 +19,7 @@
 <html lang="en">
 
 <head>
-    {{> _head path="../.."}}
+    {{> _head path="../.." path1="../../.."}}
 </head>
 
 <body>
@@ -40,13 +40,13 @@
                     </a>
                 </p>
                 <div class="row justify-content-center form-bg-image"
-                    data-background-lg="{{pathFromGulp}}/assets/img/illustrations/signin.svg">
+                    data-background-lg="{{path2}}/assets/img/illustrations/signin.svg">
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
-                                <h1 class="mb-0 h3">Sign in to our platform</h1>
+                                <h1 class="mb-0 h3">{{path2}}</h1>
                             </div>
-                            <form action="post" id="FormId" class="mt-4">
+                            <form action="#" class="mt-4">
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Your Email</label>
@@ -61,8 +61,8 @@
                                                 </path>
                                             </svg>
                                         </span>
-                                        <input type="text" name="UserName" class="form-control"
-                                            placeholder="example@company.com" id="email" autofocus required>
+                                        <input type="email" class="form-control" placeholder="example@company.com"
+                                            id="email" autofocus required>
                                     </div>
                                 </div>
                                 <!-- End of Form -->
@@ -79,8 +79,8 @@
                                                         clip-rule="evenodd"></path>
                                                 </svg>
                                             </span>
-                                            <input type="password" name="Password" placeholder="Password"
-                                                class="form-control" id="password" required>
+                                            <input type="password" placeholder="Password" class="form-control"
+                                                id="password" required>
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -96,7 +96,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" id="SaveButtonId" class="btn btn-gray-800">Sign in</button>
+                                    <button type="submit" class="btn btn-gray-800">Sign in</button>
                                 </div>
                             </form>
                             <div class="mt-3 mb-4 text-center">
@@ -149,7 +149,6 @@
     
     {{> Scripts/_forLogin path="../.."}}
 
-    <script type="module" src="../../Js/Authentication/SignIn/entryFile.js"></script>
 </body>
 
 </html>

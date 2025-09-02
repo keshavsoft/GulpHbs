@@ -29,6 +29,12 @@
                 "DisplayName": "WithSerial",
                 "IconClass": "bi bi-globe2",
                 "SpanClass": "text-danger"
+            },
+            {
+                "SubItemName": "showWSAndPage",
+                "DisplayName": "Serial & Page",
+                "IconClass": "bi bi-globe2",
+                "SpanClass": "text-danger"
             }
         ]
     },

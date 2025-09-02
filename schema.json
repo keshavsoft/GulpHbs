@@ -1,40 +1,63 @@
 {
-    "tableName": "UsersTable",
+    "tableName": "QuestionsTable",
     "columns": [
         {
-            "field": "UserName",
-            "title": "UserName",
-            "unique": true,
+            "field": "module_id",
+            "title": "Module ID",
+            "unique": false,
             "type": "text",
-            "isInput": true,
-            "isAutoFocus": true
+            "isInput": true
+        },
+         {
+            "field": "level_id",
+            "title": "Level",
+            "unique": false,
+            "type": "text",
+            "isInput": true
         },
         {
-            "field": "Password",
-            "title": "Password",
+            "field": "question",
+            "title": "Question",
+            "unique": true,
             "type": "text",
             "isInput": true
         }
+        
     ],
-    "data": [
-        {
-            "UserName": "Keshav",
-            "Password": 9848163021
-        }
-    ],
+    "data": [],
     "Vertical": [
         {
-            "field": "UserName",
-            "title": "UserName",
+            "field": "title",
+            "title": "Title",
             "unique": true,
             "type": "text",
             "isInput": true
         },
         {
-            "field": "Password",
-            "title": "Password",
-            "type": "text",
+            "field": "start",
+            "title": "Start Date",
+            "unique": false,
+            "type": "date",
             "isInput": true
+        },
+        {
+            "field": "className",
+            "title": "Class Name",
+            "unique": false,
+            "type": "text",
+            "isInput": false,
+            "isSelect": false,
+            "isDataList": true,
+            "selectOptions": [
+                {
+                    "value": "bg-primary",
+                    "text": "bg-primary"
+                },
+                {
+                    "value": "bg-success",
+                    "text": "bg-success"
+                }
+            ]
         }
     ],
     "DataTableOptions": {

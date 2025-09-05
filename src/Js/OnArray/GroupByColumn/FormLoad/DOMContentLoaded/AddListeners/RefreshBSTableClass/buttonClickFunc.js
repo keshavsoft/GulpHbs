@@ -1,7 +1,7 @@
-import { StartFunc as StartFuncFetchAsGet } from "./FetchAsGet/entryFile.js";
+import { StartFunc as StartFuncFromFetchFromFuncs } from "./FetchFromFuncs/entryFile.js";
 
 let StartFunc = async () => {
-    StartFuncFetchAsGet().then((inData) => { });
+    StartFuncFromFetchFromFuncs().then((inData) => { });
 };
 
 export { StartFunc };

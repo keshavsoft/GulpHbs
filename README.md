@@ -263,3 +263,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.16
 
 - sign in background image perfect
+
+### 1.4.18
+
+- GroupBy from Fetch

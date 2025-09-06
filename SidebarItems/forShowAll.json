@@ -29,6 +29,18 @@
                 "DisplayName": "showWSAndPage",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "footerTotal",
+                "DisplayName": "fTotal",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "filters",
+                "DisplayName": "filters",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
             }
         ]
     }

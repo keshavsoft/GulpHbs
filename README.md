@@ -276,4 +276,7 @@ createFooterWS focus working good, but remove # and add autofocus
 
 - Cards good
 
+### 1.4.21
+
+- Cards class changed perfect
 

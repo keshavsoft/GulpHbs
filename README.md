@@ -280,3 +280,6 @@ createFooterWS focus working good, but remove # and add autofocus
 
 - Cards class changed perfect
 
+### 1.4.22
+
+- Charts started

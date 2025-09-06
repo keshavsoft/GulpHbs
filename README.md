@@ -287,3 +287,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.23
 
 - Charts perfect
+
+### 1.4.24
+
+- table in showall perfect

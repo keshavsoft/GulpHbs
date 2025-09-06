@@ -43,5 +43,11 @@
                 "SpanClass": "text-success"
             }
         ]
+    },
+    {
+        "Name": "table",
+        "DisplayName": "Table",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
     }
 ]

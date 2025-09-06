@@ -271,3 +271,9 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.19
 
 - ShowAll started
+
+### 1.4.20
+
+- Cards good
+
+

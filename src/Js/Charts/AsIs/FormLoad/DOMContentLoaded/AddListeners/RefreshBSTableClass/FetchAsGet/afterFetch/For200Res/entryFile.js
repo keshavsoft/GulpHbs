@@ -1,4 +1,44 @@
 let StartFunc = ({ inResponseAsJson }) => {
+    const jVarLocalCreditArray = inResponseAsJson.map(element => {
+        return element.Credit;
+    });
+
+    const jVarLocalPkArray = inResponseAsJson.map(element => {
+        return element.pk;
+    });
+
+    if (d.querySelector('.ct-chart-sales-value')) {
+        //Chart 5
+        new Chartist.Line('.ct-chart-sales-value', {
+            labels: jVarLocalPkArray,
+            series: [
+                jVarLocalCreditArray
+            ]
+        }, {
+            low: 0,
+            showArea: true,
+            fullWidth: true,
+            plugins: [
+                Chartist.plugins.tooltip()
+            ],
+            axisX: {
+                // On the x-axis start means top and end means bottom
+                position: 'end',
+                showGrid: true
+            },
+            axisY: {
+                // On the y-axis start means left and end means right
+                showGrid: false,
+                showLabel: false,
+                labelInterpolationFnc: function (value) {
+                    return '$' + (value / 1) + 'k';
+                }
+            }
+        });
+    }
+};
+
+let StartFunc1 = ({ inResponseAsJson }) => {
     inResponseAsJson.forEach(element => {
         if (element.Credit > 0) {
             LocalFuncForCredit({

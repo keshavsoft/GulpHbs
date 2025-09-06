@@ -283,3 +283,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.22
 
 - Charts started
+
+### 1.4.23
+
+- Charts perfect

@@ -267,3 +267,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.18
 
 - GroupBy from Fetch
+
+### 1.4.19
+
+- ShowAll started

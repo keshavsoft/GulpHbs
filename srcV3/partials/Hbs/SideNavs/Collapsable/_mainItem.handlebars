@@ -1,0 +1,37 @@
+
+{{!-- SideNavs/Collapsable/_CollapseItem.hbs --}}
+<li class="nav-item">
+  <span
+    class="nav-link collapsed d-flex justify-content-between align-items-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#submenu-{{Name}}"
+    aria-expanded="{{#if (isEqual  Name currentPageGroup)}}true{{else}}false{{/if}}"
+  >
+    <span>
+      <span class="sidebar-icon {{SpanClass}}">
+        <i class="{{IconClass}}"></i>
+      </span>
+      <span class="sidebar-text">{{DisplayName}}</span>
+    </span>
+    <span class="link-arrow text-muted">
+      <i class="bi bi-chevron-right"></i>
+    </span>
+  </span>
+
+  <div
+    class="multi-level collapse{{#if (isEqual  Name currentPageGroup)}} show{{/if}}"
+    id="submenu-{{Name}}"
+    role="list"
+    aria-expanded="{{#if (isEqual  Name currentPageGroup)}}true{{else}}false{{/if}}"
+    data-bs-parent="#sidebarMenu"
+  >
+    <ul class="flex-column nav">
+      {{#each SubItems}}
+        {{> SideNavs/Collapsable/_subItem
+            SubItemName=SubItemName
+            DisplayName=DisplayName
+            isActive=(isEqual  SubItemName ../currentPage) }}
+      {{/each}}
+    </ul>
+  </div>
+</li>

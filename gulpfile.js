@@ -39,6 +39,7 @@ const CommonColumns = require("./schema.json");
 const SideBarItems = require("./SideBar.json");
 const SideBarForCalender = require("./SideBarForCalender.json");
 const CommonSideBarsImportJson = require("./SideBars/import.json");
+const SideBarItemsForShowAll = require("./SidebarItems/forShowAll.json");
 
 // Define paths
 const paths = {
@@ -92,7 +93,8 @@ var templateData = {
     columns: CommonColumns.columns,
     DataTableOptions: CommonColumns.DataTableOptions,
     SideBarForImport: CommonSideBarsImportJson,
-    pathFromGulp: "../.."
+    pathFromGulp: "../..",
+    SideBarItemsForShowAll: SideBarItemsForShowAll
 };
 
 options = {

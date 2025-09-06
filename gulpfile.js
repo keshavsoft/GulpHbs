@@ -36,10 +36,11 @@ dotenv.config();
 
 // Load and enhance schema.json
 const CommonColumns = require("./schema.json");
-const SideBarItems = require("./SideBar.json");
-const SideBarForCalender = require("./SideBarForCalender.json");
+const SideBarItems = require("./SidebarItems/SideBar.json");
+const SideBarForCalender = require("./SidebarItems/forCalender.json");
 const CommonSideBarsImportJson = require("./SideBars/import.json");
 const SideBarItemsForShowAll = require("./SidebarItems/forShowAll.json");
+const SideBarForRead = require("./SidebarItems/forRead.json")
 
 // Define paths
 const paths = {
@@ -94,7 +95,8 @@ var templateData = {
     DataTableOptions: CommonColumns.DataTableOptions,
     SideBarForImport: CommonSideBarsImportJson,
     pathFromGulp: "../..",
-    SideBarItemsForShowAll: SideBarItemsForShowAll
+    SideBarItemsForShowAll: SideBarItemsForShowAll,
+    SideBarForRead: SideBarForRead
 };
 
 options = {

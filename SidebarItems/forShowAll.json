@@ -13,8 +13,20 @@
         "isCollapsable": true,
         "SubItems": [
             {
-                "SubItemName": "showAsIs",
+                "SubItemName": "AsIs",
                 "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWS",
+                "DisplayName": "ShowWS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWSAndPage",
+                "DisplayName": "showWSAndPage",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }

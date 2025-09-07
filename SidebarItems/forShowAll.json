@@ -49,5 +49,35 @@
         "DisplayName": "Table",
         "IconClass": "bi bi-speedometer2",
         "SpanClass": "text-danger"
+    },
+    {
+        "Name": "totals",
+        "DisplayName": "Totals",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "totalsSum",
+                "DisplayName": "Summary",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "balance",
+        "DisplayName": "Balance",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "balanceSimple",
+                "DisplayName": "Simple",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

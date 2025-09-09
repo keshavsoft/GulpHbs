@@ -42,6 +42,7 @@ const CommonSideBarsImportJson = require("./SideBars/import.json");
 const SideBarItemsForShowAll = require("./SidebarItems/forShowAll.json");
 const SideBarForRead = require("./SidebarItems/forRead.json")
 const SideBarItemsforCreate = require("./SidebarItems/forCreate.json");
+const SideBarItemsforDelete = require("./SidebarItems/forDelete.json");
 
 // Define paths
 const paths = {
@@ -98,7 +99,8 @@ var templateData = {
     pathFromGulp: "../..",
     SideBarItemsForShowAll: SideBarItemsForShowAll,
     SideBarForRead: SideBarForRead,
-    SideBarItemsforCreate: SideBarItemsforCreate
+    SideBarItemsforCreate: SideBarItemsforCreate,
+    SideBarItemsforDelete: SideBarItemsforDelete
 };
 
 options = {

@@ -35,13 +35,13 @@
     {
         "Name": "table",
         "DisplayName": "Table",
-        "IconClass": "bi bi-speedometer2",
+        "IconClass": "bi bi-table",
         "SpanClass": "text-danger"
     },
     {
         "Name": "totals",
         "DisplayName": "Totals",
-        "IconClass": "bi bi-eye",
+        "IconClass": "bi bi-calculator",
         "SpanClass": "text-success",
         "isCollapsable": true,
         "SubItems": [
@@ -56,7 +56,7 @@
     {
         "Name": "balance",
         "DisplayName": "Balance",
-        "IconClass": "bi bi-eye",
+        "IconClass": "bi bi-bootstrap",
         "SpanClass": "text-success",
         "isCollapsable": true,
         "SubItems": [
@@ -71,7 +71,7 @@
     {
         "Name": "filter",
         "DisplayName": "FilterShow",
-        "IconClass": "bi bi-file-plus",
+        "IconClass": "bi bi-funnel",
         "SpanClass": "text-secondary",
         "isCollapsable": true,
         "SubItems": [

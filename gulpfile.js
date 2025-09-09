@@ -41,6 +41,7 @@ const SideBarForCalender = require("./SidebarItems/forCalender.json");
 const CommonSideBarsImportJson = require("./SideBars/import.json");
 const SideBarItemsForShowAll = require("./SidebarItems/forShowAll.json");
 const SideBarForRead = require("./SidebarItems/forRead.json")
+const SideBarItemsforCreate = require("./SidebarItems/forCreate.json");
 
 // Define paths
 const paths = {
@@ -96,7 +97,8 @@ var templateData = {
     SideBarForImport: CommonSideBarsImportJson,
     pathFromGulp: "../..",
     SideBarItemsForShowAll: SideBarItemsForShowAll,
-    SideBarForRead: SideBarForRead
+    SideBarForRead: SideBarForRead,
+    SideBarItemsforCreate: SideBarItemsforCreate
 };
 
 options = {

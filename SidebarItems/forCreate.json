@@ -1,0 +1,35 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "Create",
+        "DisplayName": "Create",
+        "IconClass": "bi bi-pencil-square",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "footerWS",
+                "DisplayName": "footerWS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "footerWT",
+                "DisplayName": "footerWT",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "vertical",
+        "DisplayName": "vertical",
+        "IconClass": "bi bi-pen",
+        "SpanClass": "text-danger"
+    }
+]

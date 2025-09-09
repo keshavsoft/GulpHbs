@@ -6,7 +6,7 @@
         "SpanClass": "text-danger"
     },
     {
-        "Name": "AsIs",
+        "Name": "ShowAll",
         "DisplayName": "ShowAll",
         "IconClass": "bi bi-eye",
         "SpanClass": "text-success",
@@ -27,18 +27,6 @@
             {
                 "SubItemName": "showWSAndPage",
                 "DisplayName": "showWSAndPage",
-                "IconClass": "bi bi-eye",
-                "SpanClass": "text-success"
-            },
-            {
-                "SubItemName": "footerTotal",
-                "DisplayName": "fTotal",
-                "IconClass": "bi bi-eye",
-                "SpanClass": "text-success"
-            },
-            {
-                "SubItemName": "filters",
-                "DisplayName": "filters",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }
@@ -98,12 +86,6 @@
                 "DisplayName": "AccountWithBalance",
                 "IconClass": "bi bi-cash-coin",
                 "SpanClass": "text-info"
-            },
-            {
-                "SubItemName": "filterDebitShow",
-                "DisplayName": "Debit",
-                "IconClass": "bi bi-credit-card",
-                "SpanClass": "text-danger"
             }
         ]
     }

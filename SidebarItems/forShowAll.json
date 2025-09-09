@@ -79,5 +79,32 @@
                 "SpanClass": "text-success"
             }
         ]
+    },
+    {
+        "Name": "filter",
+        "DisplayName": "FilterShow",
+        "IconClass": "bi bi-file-plus",
+        "SpanClass": "text-secondary",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "filterAccountNameShow",
+                "DisplayName": "AccountName",
+                "IconClass": "bi bi-person-lines-fill",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "filterAccountWithBalance",
+                "DisplayName": "AccountWithBalance",
+                "IconClass": "bi bi-cash-coin",
+                "SpanClass": "text-info"
+            },
+            {
+                "SubItemName": "filterDebitShow",
+                "DisplayName": "Debit",
+                "IconClass": "bi bi-credit-card",
+                "SpanClass": "text-danger"
+            }
+        ]
     }
 ]

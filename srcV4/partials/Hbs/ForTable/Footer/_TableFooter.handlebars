@@ -1,0 +1,64 @@
+<tr>
+    <th> </th>
+
+    {{#each columns}}
+    <th>
+        {{#if isInput}}
+        <input class="form-control" id="HtmlId-{{field}}" name="{{field}}" autocomplete="off"
+         {{#if required}}required{{/if}}
+          {{#if isAutoFocus}} autofocus {{/if}} />
+        {{/if}}
+        
+        {{#if isNumber}}
+        {{#if ShowTotal}}
+        <div class="input-group">
+            <input type="number" class="form-control" id="HtmlId-{{field}}" name="{{field}}" autocomplete="off" {{#if
+                required}}required{{/if}} {{#if numberConfig}}step="{{numberConfig.step}}" {{/if}} {{#if
+                numberConfig}}min="{{numberConfig.min}}" {{/if}} {{#if numberConfig}}max="{{numberConfig.max}}" {{#if
+                autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus
+                field)}}autofocus{{/if}}{{/if}} {{/if}} />
+            <span class="input-group-text" id="HtmlTotalId-{{field}}">Total</span>
+        </div>
+        {{else}}
+        <input type="number" class="form-control" id="HtmlId-{{field}}" name="{{field}}" autocomplete="off" {{#if
+            required}}required{{/if}} {{#if numberConfig}}step="{{numberConfig.step}}" {{/if}} {{#if
+            numberConfig}}min="{{numberConfig.min}}" {{/if}} {{#if numberConfig}}max="{{numberConfig.max}}" {{#if
+            autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}}
+            {{/if}} />
+        {{/if}}
+        {{/if}}
+        {{#if isDate}}
+        <input type="date" class="form-control" id="HtmlId-{{field}}" name="{{field}}" autocomplete="off" {{#if
+            required}}required{{/if}} {{#if dateConfig}}min="{{dateConfig.min}}" {{/if}} {{#if
+            dateConfig}}max="{{dateConfig.max}}" {{/if}} />
+        {{/if}}
+
+        {{#if isSelect}}
+        <select name="{{field}}" id="HtmlId-{{field}}" class="form-select">
+            {{#each selectOptions}}
+            <option value="{{this.value}}">{{this.text}}</option>
+            {{/each}}
+        </select>
+        {{/if}}
+
+        {{#if isDataList}}
+        <input class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLId-{{field}}" />
+        <datalist id="HtmlDLId-{{field}}">
+            {{#each selectOptions}}
+            <option value="{{this.value}}">{{this.text}}</option>
+            {{/each}}
+        </datalist>
+        {{/if}}
+
+        {{#if isDataListEmpty}}
+        <input class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLEId-{{field}}" />
+        <datalist id="HtmlDLEId-{{field}}"></datalist>
+        {{/if}}
+    </th>
+
+    {{/each}}
+    <th>
+        <button class="btn btn-sm btn-success save-btn" id="TableFooterSaveButtonId"
+            data-index="{{@index}}">Save</button>
+    </th>
+</tr>

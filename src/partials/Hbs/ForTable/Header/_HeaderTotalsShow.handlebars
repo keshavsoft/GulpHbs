@@ -7,7 +7,9 @@
       {{#if filterControl}}data-filter-control="{{filterControl}}" {{/if}}
        {{#if (isVisible this)}}data-visible={{visible}}{{/if}}
         {{#if showRupee}}data-formatter="window.RupeeFormatter" {{/if}}
-         {{#if ShowDifference}}data-minus="{{minusColumn}}" {{/if}}>
+         {{#if ShowDifference}}data-minus="{{minusColumn}}" {{/if}}
+            {{#if filterControl}}data-filter-control="{{filterControl}}" {{/if}}
+         >
         {{title}}
     </th>
     {{/each}}

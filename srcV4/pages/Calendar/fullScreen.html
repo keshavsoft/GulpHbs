@@ -1,0 +1,49 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head path="../.."}}
+</head>
+
+<body>
+    {{> _nav path="../.."}}
+
+    {{> SideNavs/sidebarForCalender path="../.." currentPage="fullScreen"
+    currentPageGroup="fullScreen"}}
+
+    <main class="content">
+        <div class="row mt-4">
+            <div class="col-8">
+                <div id='calendar'></div>
+            </div>
+        </div>
+
+        {{> Scripts/_scriptsForCalendar}}
+        <script>
+            let jVarCommonCalendar = null;
+        </script>
+
+        <script type="module" src="../../Js/Calendar/CommonFuncs/TopbarWithEntry/entryFile.js"></script>
+        <script type="module" src="../../Js/Calendar/FullScreen/entryFile.js"></script>
+    </main>
+
+</body>
+
+</html>

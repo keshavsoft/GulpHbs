@@ -1,0 +1,15 @@
+<tr>
+    <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+
+    {{#each columns}}
+    <th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if
+        filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if (isVisible this)}}
+        data-visible={{visible}}{{/if}} {{#if footerFormatter}}data-footer-formatter="{{footerFormatter}}" {{/if}}{{#if
+        showRupee}}data-formatter="window.RupeeFormatter" {{/if}}>
+        {{title}}
+    </th>
+    {{/each}}
+    <th data-field="KS-Delete" data-formatter="window.GlobalDeleteFormatter">
+        Options
+    </th>
+</tr>

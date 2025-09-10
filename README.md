@@ -299,3 +299,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.26
 
 - more added to showall
+
+### 1.4.27
+
+- groupBy working good

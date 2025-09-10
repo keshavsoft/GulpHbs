@@ -43,6 +43,7 @@ const SideBarItemsForShowAll = require("./SidebarItems/forShowAll.json");
 const SideBarForRead = require("./SidebarItems/forRead.json")
 const SideBarItemsforCreate = require("./SidebarItems/forCreate.json");
 const SideBarItemsforDelete = require("./SidebarItems/forDelete.json");
+const SideBarItemsForGroupBy = require("./SidebarItems/forGroupBy.json")
 
 // Define paths
 const paths = {

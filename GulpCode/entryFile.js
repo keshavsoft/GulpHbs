@@ -14,6 +14,7 @@ const StartFunc = ({ inDistPath }) => {
     LocalFuncForCharts({ inDistPath });
     LocalFuncForCreate({ inDistPath });
     LocalFuncForDelete({ inDistPath });
+    LocalFuncForAlter({ inDistPath });
 };
 
 const LocalFuncForOnArray = ({ inDistPath }) => {
@@ -173,6 +174,21 @@ const LocalFuncForDelete = ({ inDistPath }) => {
     contentAsJson.TableName = contentAsJson.TableName.replace("$ApiVersion", process.env.VERSION);
     // console.log("2222222222 : ", contentAsJson);
     // contentAsJson.DataTableOptions.Header.autoFocus = process.env.autoFocus;
+    contentAsJson.DataTableOptions = CommonSchemaJson.DataTableOptions;
+
+    fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
+};
+
+const LocalFuncForAlter = ({ inDistPath }) => {
+    const LocalDistPath = inDistPath;
+
+    const filePath = `${LocalDistPath}/Js/Alter/Config.json`;
+
+    const content = fse.readFileSync(filePath, 'utf-8');
+    const contentAsJson = JSON.parse(content);
+    contentAsJson.columns = CommonSchemaJson.columns;
+    contentAsJson.TableName = contentAsJson.TableName.replace("$TableName", CommonSchemaJson.tableName);
+    contentAsJson.TableName = contentAsJson.TableName.replace("$ApiVersion", process.env.VERSION);
     contentAsJson.DataTableOptions = CommonSchemaJson.DataTableOptions;
 
     fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');

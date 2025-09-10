@@ -1,0 +1,23 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "ChartsAll",
+        "DisplayName": "Charts",
+        "IconClass": "bi bi-graph-up-arrow",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "asIs",
+                "DisplayName": "asIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    }
+]

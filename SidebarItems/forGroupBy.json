@@ -6,15 +6,21 @@
         "SpanClass": "text-danger"
     },
     {
-        "Name": "accountName",
-        "DisplayName": "AccountColumn",
+        "Name": "GroupByAll",
+        "DisplayName": "GroupBy",
         "IconClass": "bi bi-eye",
         "SpanClass": "text-success",
         "isCollapsable": true,
         "SubItems": [
             {
-                "SubItemName": "accountColumn",
-                "DisplayName": "Sum",
+                "SubItemName": "column",
+                "DisplayName": "column",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "count",
+                "DisplayName": "count",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }

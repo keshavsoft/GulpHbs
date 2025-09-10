@@ -109,7 +109,8 @@ var templateData = {
     SideBarItemsforAlter: SideBarItemsforAlter,
     SideBarItemsforDownload: SideBarItemsforDownload,
     SideBarItemsforCards: SideBarItemsforCards,
-    SideBarItemsforCharts: SideBarItemsforCharts
+    SideBarItemsforCharts: SideBarItemsforCharts,
+    SideBarItemsForGroupBy: SideBarItemsForGroupBy
 };
 
 options = {

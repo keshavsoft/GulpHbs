@@ -15,6 +15,7 @@ const StartFunc = ({ inDistPath }) => {
     LocalFuncForCreate({ inDistPath });
     LocalFuncForDelete({ inDistPath });
     LocalFuncForAlter({ inDistPath });
+    LocalFuncForDownload({ inDistPath });
 };
 
 const LocalFuncForOnArray = ({ inDistPath }) => {
@@ -183,6 +184,21 @@ const LocalFuncForAlter = ({ inDistPath }) => {
     const LocalDistPath = inDistPath;
 
     const filePath = `${LocalDistPath}/Js/Alter/Config.json`;
+
+    const content = fse.readFileSync(filePath, 'utf-8');
+    const contentAsJson = JSON.parse(content);
+    contentAsJson.columns = CommonSchemaJson.columns;
+    contentAsJson.TableName = contentAsJson.TableName.replace("$TableName", CommonSchemaJson.tableName);
+    contentAsJson.TableName = contentAsJson.TableName.replace("$ApiVersion", process.env.VERSION);
+    contentAsJson.DataTableOptions = CommonSchemaJson.DataTableOptions;
+
+    fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
+};
+
+const LocalFuncForDownload = ({ inDistPath }) => {
+    const LocalDistPath = inDistPath;
+
+    const filePath = `${LocalDistPath}/Js/Download/Config.json`;
 
     const content = fse.readFileSync(filePath, 'utf-8');
     const contentAsJson = JSON.parse(content);

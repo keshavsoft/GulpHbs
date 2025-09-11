@@ -303,3 +303,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.27
 
 - groupBy working good
+
+### 1.4.28
+
+- ShowAll link LinkDirect perfect

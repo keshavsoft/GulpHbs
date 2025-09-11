@@ -33,9 +33,8 @@
         {{> _breadCrumb path="../.." page="linkToWa"}}
 
         <div id="toolbar">
-            <a id="RefreshATagId" href="#"
-                class="btn d-flex justify-content-center align-items-center RefreshBSTableClass bg-gray-700 text-white"
-                style="width: 40px; height: 40px; border-radius: 50%;">
+            <button
+                class="btn d-flex justify-content-center align-items-center RefreshBSTableClass bg-gray-700 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"
                     style="width: 20px; height: 20px; flex-shrink: 0;">
                     <path
@@ -43,7 +42,7 @@
                     <path
                         d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324z" />
                 </svg>
-            </a>
+            </button>
         </div>
         <div class="card ">
             <div class="card-body">
@@ -84,7 +83,6 @@
                 return index + 1;
             };
 
-         
             window.SendMessages = (value, row, index) => {
                 return `<select class="form-select" style="width: 300px">
                                     <option value="Greetings from KehavSoft">Greetings from KehavSoft</option>
@@ -92,7 +90,7 @@
                                     </option>
                                          <option value="ready for tasks now ?">ready for tasks now ?</option>
                                          <option value="Task1">Task1</option>
-                                             <option value="deadline : today EOD">deadline : today EOD</option>
+                                             <option value="deadline : today EOD, all the best 👍">deadline : today EOD, all the best 👍</option>
                                       <option value="deadline : tomorrow EOD, all the best 👍">deadline : tomorrow EOD, all the best 👍</option>                                             
                                 </select>`;
             };

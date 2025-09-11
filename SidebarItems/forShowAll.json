@@ -102,9 +102,15 @@
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             },
-             {
+            {
                 "SubItemName": "linkAndPage",
                 "DisplayName": "linkAndPage",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "linkDirect",
+                "DisplayName": "Link Direct",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
             }

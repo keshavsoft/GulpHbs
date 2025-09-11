@@ -307,3 +307,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.28
 
 - ShowAll link LinkDirect perfect
+
+### 1.4.29
+
+- ShowAll link LinkDirect added to sidebar also

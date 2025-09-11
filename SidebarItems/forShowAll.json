@@ -88,5 +88,20 @@
                 "SpanClass": "text-info"
             }
         ]
+    },
+    {
+        "Name": "ListAll",
+        "DisplayName": "Link",
+        "IconClass": "bi bi-whatsapp",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "link",
+                "DisplayName": "link",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

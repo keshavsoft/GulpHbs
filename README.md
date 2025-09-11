@@ -311,3 +311,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.29
 
 - ShowAll link LinkDirect added to sidebar also
+
+### 1.4.30
+
+- ShowAll link linkToWa perfect with messages

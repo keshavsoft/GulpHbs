@@ -113,10 +113,16 @@
                 "DisplayName": "Link Direct",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "linkToWa",
+                "DisplayName": "linkToWa",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
             }
         ]
     },
-     {
+    {
         "Name": "ImageAll",
         "DisplayName": "Image",
         "IconClass": "bi bi-image",

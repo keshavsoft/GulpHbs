@@ -115,5 +115,20 @@
                 "SpanClass": "text-success"
             }
         ]
+    },
+     {
+        "Name": "ImageAll",
+        "DisplayName": "Image",
+        "IconClass": "bi bi-image",
+        "SpanClass": "text-warning",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "image",
+                "DisplayName": "image",
+                "IconClass": "bi bi-image",
+                "SpanClass": "text-success"
+            }
+        ]
     }
 ]

@@ -1,0 +1,26 @@
+{{#each columns}}
+<div class="col-lg-12 col-md-6 mb-3">
+  <label for="HtmlId-{{field}}" class="form-label">
+    {{#if title}}{{title}}{{else}}{{field}}{{/if}}
+  </label>
+
+  {{#if isInput}}
+  <input type="text" class="form-control" id="HtmlId-{{field}}" name="{{field}}" autocomplete="off" {{#if
+    autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} {{#if isAutoFocus}} autofocus {{/if}}/>
+  {{/if}}
+
+  {{#if isDate}}
+  <input type="date" class="form-control" id="HtmlId-{{field}}" name="{{field}}" {{#if
+    dateConfig.min}}min="{{dateConfig.min}}" {{/if}} {{#if dateConfig.max}}max="{{dateConfig.max}}" {{/if}} {{#if
+    ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} />
+  {{/if}}
+
+  {{#if isNumber}}
+  <input type="number" class="form-control" id="HtmlId-{{field}}" name="{{field}}" step="{{numberConfig.step}}"
+    min="{{numberConfig.min}}" max="{{numberConfig.max}}" {{#if ../autoFocus}}{{#if (isEqual ../autoFocus
+    field)}}autofocus{{/if}}{{/if}} />
+  {{/if}}
+
+  <div class="invalid-feedback">{{errorMessage}}</div>
+</div>
+{{/each}}

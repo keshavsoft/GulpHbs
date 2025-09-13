@@ -327,3 +327,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.33
 
 - json file changed
+
+### 1.5.1
+
+- common js started in show all

@@ -1,0 +1,41 @@
+<div class="d-flex flex-column gap-1">
+
+  {{!-- Text Input --}}
+  {{#if isInput}}
+    
+    <div class="invisible"><small>placeholder</small></div>
+  {{/if}}
+
+  {{!-- Number Input --}}
+  {{#if isNumber}}
+    
+
+    {{#if ShowTotal}}
+      <small id="HtmlTotalId-{{field}}" class="form-text text-muted">Total: 0</small>
+    {{/if}}
+
+    {{#if ShowDifference}}
+      <div class="text-muted fw-bold">Diff: <span id="HtmlDiffId-{{field}}">0</span></div>
+    {{/if}}
+  {{/if}}
+
+  {{!-- Date Input --}}
+  {{#if isDate}}
+   
+    <div class="invisible"><small>placeholder</small></div>
+  {{/if}}
+
+  {{!-- Select Field --}}
+  {{#if isSelect}}
+   
+    <div class="invisible"><small>placeholder</small></div>
+  {{/if}}
+
+  {{!-- Datalist Input --}}
+  {{#if isDataList}}
+  
+  {{else if isDataListEmpty}}
+  
+  {{/if}}
+
+</div>

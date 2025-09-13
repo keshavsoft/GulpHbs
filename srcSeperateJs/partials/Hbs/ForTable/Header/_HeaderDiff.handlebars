@@ -1,0 +1,6 @@
+{{#each columns}}
+<th data-field="{{field}}" {{#if align}}data-align="{{align}}" {{/if}} {{#if filterControl}}data-filter-control="select"
+    {{/if}} {{#if align}}data-align="{{align}}" {{/if}} {{#if showRupee}}data-formatter="window.RupeeFormatter" {{/if}}>
+    {{#if title}}{{title}}{{/if}}
+</th>
+{{/each}}

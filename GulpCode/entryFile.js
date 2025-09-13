@@ -93,7 +93,7 @@ const LocalFuncForCalendar = ({ inDistPath }) => {
 const LocalFuncForShowAll = ({ inDistPath }) => {
     const LocalDistPath = inDistPath;
 
-    const filePath = `${LocalDistPath}/Js/ShowAll/Config.json`;
+    const filePath = `${LocalDistPath}/Js/Config.json`;
 
     const content = fse.readFileSync(filePath, 'utf-8');
     const contentAsJson = JSON.parse(content);

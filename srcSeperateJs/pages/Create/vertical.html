@@ -1,0 +1,60 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head path="../.."}}
+</head>
+
+<body>
+    {{> _nav path="../.."}}
+
+    {{> SideNavs/create path="../.." currentPage="vertical" currentPageGroup="vertical"}}
+    <main class="content">
+        {{> _topbar path="../.."}}
+
+        {{> _breadCrumb path="../.." page="vertical"}}
+
+      
+        <div class="row">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <form onsubmit="return false" id="FormId">
+                        <div class="row">
+                            {{> ForTable/_loopArray}}
+                            <div class="text-center mt-4">
+                                <button id="SaveButtonId"
+                                    class="btn btn-primary px-4 RefreshBSTableClass">Create</button>
+                            </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {{> _footer path="../.."}}
+
+        {{> Scripts/_scripts}}
+
+        <script type="module" src="../../Js/Create/Vertical/entryFile.js"></script>
+    </main>
+
+</body>
+
+</html>

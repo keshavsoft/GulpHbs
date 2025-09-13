@@ -323,3 +323,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.4.32
 
 - ShowAll linkToWa tasks added
+
+### 1.4.33
+
+- json file changed

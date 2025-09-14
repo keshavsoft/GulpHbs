@@ -339,3 +339,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.5.3
 
 - login perfect still js need to be common...
+
+### 1.5.4
+
+- sign in html changed

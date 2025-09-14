@@ -6,6 +6,8 @@ let StartFunc = async ({ inResponse }) => {
 
     if (jVarLocalResponse.status === 200) {
         let jVarLocalSavedPk = await jVarLocalResponse.text();
+        console.log("aaaaaaaaa : ", jVarLocalSavedPk);
+
         Status200({ inRowPk: jVarLocalSavedPk });
     };
 

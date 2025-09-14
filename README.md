@@ -331,3 +331,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.5.1
 
 - common js started in show all
+
+### 1.5.2
+
+- still working on protected login ui side...

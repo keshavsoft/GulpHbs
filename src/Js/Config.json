@@ -1,5 +1,5 @@
 {
-    "TableName": "/$ApiVersion/$TableName",
+    "TableName": "/SV3/StudentNames",
     "showFooter": true,
     "toolbar": "#toolbar",
     "searchable": true,
@@ -118,5 +118,8 @@
             "type": "text",
             "isInput": true
         }
-    ]
+    ],
+    "Protected": {
+        "RedirectUrl": "../Authentication/sign-in.html"
+    }
 }

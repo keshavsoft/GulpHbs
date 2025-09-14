@@ -347,3 +347,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.5.5
 
 - protected more perfect
+
+### 1.5.6
+
+- root index.html is new menu

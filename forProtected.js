@@ -50,21 +50,13 @@ const SideBarItemsforCharts = require("./SidebarItems/forCharts.json")
 
 // Define paths
 const paths = {
-    distForProtected: {
+    dist: {
         base: "./distForProtected/",
         css: "./distForProtected/css",
         html: "./distForProtected/pages",
         assets: "./distForProtected/assets",
         img: "./distForProtected/assets/img",
         vendor: "./distForProtected/vendor",
-    },
-    dist: {
-        base: "./dist/",
-        css: "./dist/css",
-        html: "./dist/pages",
-        assets: "./dist/assets",
-        img: "./dist/assets/img",
-        vendor: "./dist/vendor",
     },
     dev: {
         base: "./html&css/",
@@ -264,13 +256,6 @@ gulp.task("minify:css", function () {
         .pipe(gulp.dest(paths.dist.css));
 });
 
-gulp.task("minify:distForProtected:css", function () {
-    return gulp
-        .src([paths.distForProtected.css + "/volt.css"])
-        .pipe(cleanCss())
-        .pipe(gulp.dest(paths.distForProtected.css));
-});
-
 gulp.task("minify:html", function () {
     return gulp
         .src([paths.dist.html + "/**/*.html"])
@@ -284,21 +269,6 @@ gulp.task("minify:html", function () {
             };
         }))
         .pipe(gulp.dest(paths.dist.html));
-});
-
-gulp.task("minify:distForProtected:html", function () {
-    return gulp
-        .src([paths.distForProtected.html + "/**/*.html"])
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(handlebars(templateData, optionsObject))
-        .pipe(rename((path) => {
-            return {
-                dirname: path.dirname,
-                basename: path.basename,
-                extname: ".html"
-            };
-        }))
-        .pipe(gulp.dest(paths.distForProtected.html));
 });
 
 gulp.task("minify:html:index", function () {
@@ -316,27 +286,8 @@ gulp.task("minify:html:index", function () {
         .pipe(gulp.dest(paths.dist.base));
 });
 
-gulp.task("minify:distForProtected:html:index", function () {
-    return gulp
-        .src([paths.distForProtected.base + "*.html"])
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(handlebars(templateData, optionsObject))
-        .pipe(rename((path) => {
-            return {
-                dirname: path.dirname,
-                basename: path.basename,
-                extname: ".html"
-            };
-        }))
-        .pipe(gulp.dest(paths.distForProtected.base));
-});
-
 gulp.task("clean:dist", function () {
     return del([paths.dist.base]);
-});
-
-gulp.task("clean:distForProtected", function () {
-    return del([paths.distForProtected.base]);
 });
 
 gulp.task("clean:dev", function () {
@@ -356,21 +307,6 @@ gulp.task("copy:dist:css", function () {
         .pipe(autoprefixer({ overrideBrowserslist: ["> 1%"] }))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(paths.dist.css));
-});
-
-gulp.task("copy:distForProtected:css", function () {
-    return gulp
-        .src([
-            paths.src.scss + "/volt/**/*.scss",
-            paths.src.scss + "/custom/**/*.scss",
-            paths.src.scss + "/volt.scss",
-        ])
-        .pipe(wait(500))
-        .pipe(sourcemaps.init())
-        .pipe(sass().on("error", sass.logError))
-        .pipe(autoprefixer({ overrideBrowserslist: ["> 1%"] }))
-        .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest(paths.distForProtected.css));
 });
 
 gulp.task("copy:dev:css", function () {
@@ -402,21 +338,6 @@ gulp.task("copy:dist:html", function () {
         .pipe(gulp.dest(paths.dist.html))
 });
 
-
-gulp.task("copy:distForProtected:html", function () {
-    return gulp
-        .src([paths.src.html])
-        .pipe(handlebars(templateData, optionsObject))
-        .pipe(rename((path) => {
-            return {
-                dirname: path.dirname,
-                basename: path.basename,
-                extname: ".html"
-            };
-        }))
-        .pipe(gulp.dest(paths.distForProtected.html))
-});
-
 gulp.task("copy:dev:html", function () {
     return gulp
         .src([paths.src.html])
@@ -445,20 +366,6 @@ gulp.task("copy:dist:html:index", function () {
         .pipe(gulp.dest(paths.dist.base));
 });
 
-gulp.task("copy:distForProtected:html:index", function () {
-    return gulp
-        .src([paths.src.base + "*.html"])
-        .pipe(handlebars(templateData, optionsObject))
-        .pipe(rename((path) => {
-            return {
-                dirname: path.dirname,
-                basename: path.basename,
-                extname: ".html"
-            };
-        }))
-        .pipe(gulp.dest(paths.distForProtected.base));
-});
-
 gulp.task("copy:dev:html:index", function () {
     return gulp
         .src([paths.src.base + "*.html"])
@@ -477,10 +384,6 @@ gulp.task("copy:dist:assets", function () {
     return gulp.src(paths.src.assets).pipe(gulp.dest(paths.dist.assets));
 });
 
-gulp.task("copy:distForProtected:assets", function () {
-    return gulp.src(paths.src.assets).pipe(gulp.dest(paths.distForProtected.assets));
-});
-
 gulp.task("copy:dev:assets", function () {
     return gulp.src(paths.src.assets).pipe(gulp.dest(paths.dev.assets));
 });
@@ -489,12 +392,6 @@ gulp.task("copy:dist:vendor", function () {
     return gulp
         .src(npmDist(), { base: paths.src.node_modules })
         .pipe(gulp.dest(paths.dist.vendor));
-});
-
-gulp.task("copy:distForProtected:vendor", function () {
-    return gulp
-        .src(npmDist(), { base: paths.src.node_modules })
-        .pipe(gulp.dest(paths.distForProtected.vendor));
 });
 
 gulp.task("copy:dev:vendor", function () {
@@ -511,14 +408,6 @@ gulp.task("end:dist", async () => {
     return await true;
 });
 
-gulp.task("end:distForProtected:dist", async () => {
-    fse.copySync(`${paths.src.base}/Js`, `${paths.distForProtected.base}/Js`);
-
-    LocalFuncChangeJsConfigForProtected({ inDistPath: paths.distForProtected.base });
-
-    return await true;
-});
-
 const LocalFuncChangeJsConfig = ({ inDistPath }) => {
     const CommonVersionCode = "$ApiVersion";
     const CommonTableNameCode = "$TableName";
@@ -529,49 +418,20 @@ const LocalFuncChangeJsConfig = ({ inDistPath }) => {
 
     const content = fse.readFileSync(filePath, 'utf-8');
     const contentAsJson = JSON.parse(content);
+    // console.log("111111111111 : ", contentAsJson);
 
-    contentAsJson.columns = CommonColumns.columns;
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
-
-    contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
-
-    fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
-};
-
-const LocalFuncChangeJsConfigForProtected = ({ inDistPath }) => {
-    const CommonVersionCode = "$ApiVersion";
-    const CommonTableNameCode = "$TableName";
-
-    const LocalDistPath = inDistPath;
-
-    const filePath = `${LocalDistPath}/Js/Config.json`;
-
-    const content = fse.readFileSync(filePath, 'utf-8');
-    const contentAsJson = JSON.parse(content);
-
-    contentAsJson.columns = CommonColumns.columns;
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
+    contentAsJson.columns = CommonSchemaJson.columns;
+    contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonSchemaJson.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `S${process.env.VERSION}`);
-
-    contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
+    // console.log("2222222222 : ", contentAsJson);
+    // contentAsJson.DataTableOptions.Header.autoFocus = process.env.autoFocus;
+    contentAsJson.DataTableOptions = CommonSchemaJson.DataTableOptions;
 
     fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };
-
-gulp.task("k2", function () {
-    console.log("aaaaaaaa");
-
-    return false;
-});
-
 
 gulp.task("build:dev", gulp.series("clean:dev", "copy:dev:css", "copy:dev:html", "copy:dev:html:index", "copy:dev:assets", "copy:dev:js", "beautify:css", "copy:dev:vendor"));
 
 gulp.task("build:dist", gulp.series("clean:dist", "copy:dist:css", "copy:dist:html", "copy:dist:html:index", "copy:dist:assets", "minify:css", "minify:html", "minify:html:index", "copy:dist:vendor", "end:dist"));
-
-gulp.task("build:distForProtected", gulp.series("clean:distForProtected", "copy:distForProtected:css", "copy:distForProtected:html", "copy:distForProtected:html:index", "copy:distForProtected:assets", "minify:distForProtected:css", "minify:distForProtected:html", "minify:distForProtected:html:index", "copy:distForProtected:vendor", "end:distForProtected:dist"));
-
-// gulp.task("k1", gulp.series("k2"));
 
 gulp.task("default", gulp.series("serve"));

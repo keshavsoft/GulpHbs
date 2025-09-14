@@ -343,3 +343,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.5.4
 
 - sign in html changed
+
+### 1.5.5
+
+- protected more perfect

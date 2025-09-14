@@ -1,10 +1,9 @@
 // import UrlJson from './url.json' with { type: 'json' };
 
-// const StartFunc = ({ inRowPk }) => {
-//     if (!LocalFuncForSingleTable({ inRowPk })) {
-//         LocalFuncForAllTables({ inRowPk });
-//     }
-// };
+const StartFunc = ({ inRowPk }) => {
+    // console.log("-------inRowPk : ", inRowPk);
+    jFLocalAddUrlParams();
+};
 
 // const LocalFuncForSingleTable = ({ inRowPk }) => {
 //     if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
@@ -35,16 +34,19 @@
 
 // };
 
-// const jFLocalAddUrlParams = ({ inSuccessUrl }) => {
-//     const jVarLocalRedirectUrl = ConfigJson.Protected.RedirectUrl;
+const jFLocalAddUrlParams = () => {
+    const params = new URLSearchParams(window.location.search);
+    const jVarLocalToUrl = params.get('SuccessUrl'); // Output: "Jane"
+    console.log("aaaaaaaa : ", jVarLocalToUrl);
 
-//     const url = new URL(window.location.href);
+    // const jVarLocalRedirectUrl = ConfigJson.Protected.RedirectUrl;
 
-//     let NewURl = new URL(jVarLocalRedirectUrl, url);
+    // const url = new URL(window.location.href);
 
-//     NewURl.searchParams.append('SuccessUrl', inSuccessUrl);
-//     window.location.href = NewURl.href;
-// };
+    // let NewURl = new URL(jVarLocalRedirectUrl, url);
 
+    // NewURl.searchParams.append('SuccessUrl', inSuccessUrl);
+    window.location.href = jVarLocalToUrl;
+};
 
-// export { StartFunc };
+export { StartFunc };

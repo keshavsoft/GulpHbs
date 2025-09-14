@@ -6,7 +6,6 @@ let StartFunc = async () => {
     let jVarLocalFromCheck = CheckFunc();
 
     if (jVarLocalFromCheck) {
-
         let jVarLocalResponse = await StartFuncFetchFuncs();
 
         StartFuncAfterFetch({ inResponse: jVarLocalResponse });

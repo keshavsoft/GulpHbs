@@ -1,22 +1,31 @@
 import KeysJson from './keys.json' with { type: 'json' };
 
 let StartFunc = () => {
-    let jVarLocalForm = document.getElementById("FormId");
+    const jVarLocalBodyData = {};
+    jVarLocalBodyData.UserName = jFLocalUserNameId();
+    jVarLocalBodyData.Password = parseInt(jFLocalPasswordId());
 
-    const serializedData = jFLocalSerializeFormData(jVarLocalForm);
-    const upperCasedData = {};
-
-    for (const key in serializedData) {
-        if(key === "Password"){
-            upperCasedData[key] = parseInt(serializedData[key]);
-        } else {
-            upperCasedData[key] = serializedData[key];
-        }
-    }
-
-    KeysJson.body = JSON.stringify(upperCasedData);
+    KeysJson.body = JSON.stringify(jVarLocalBodyData);
 
     return KeysJson;
+};
+
+let jFLocalUserNameId = () => {
+    let jVarLocalUserNameId = 'UserNameId'
+    let jVarLocalHtmlId = document.getElementById(jVarLocalUserNameId);
+
+    if (jVarLocalHtmlId === null === false) {
+        return jVarLocalHtmlId.value.trim();
+    };
+};
+
+let jFLocalPasswordId = () => {
+    let jVarLocalPasswordId = 'PasswordId'
+    let jVarLocalHtmlId = document.getElementById(jVarLocalPasswordId);
+
+    if (jVarLocalHtmlId === null === false) {
+        return jVarLocalHtmlId.value.trim();
+    };
 };
 
 function jFLocalSerializeFormData(form) {

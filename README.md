@@ -335,3 +335,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.5.2
 
 - still working on protected login ui side...
+
+### 1.5.3
+
+- login perfect still js need to be common...

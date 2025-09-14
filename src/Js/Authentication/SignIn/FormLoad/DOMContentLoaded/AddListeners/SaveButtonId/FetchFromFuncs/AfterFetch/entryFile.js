@@ -3,18 +3,19 @@ import { StartFunc as Status500 } from "./status500.js";
 
 let StartFunc = async ({ inResponse }) => {
     let jVarLocalResponse = await inResponse;
+    // console.log("status : ", jVarLocalResponse);
 
     if (jVarLocalResponse.status === 200) {
         let jVarLocalSavedPk = await jVarLocalResponse.text();
-        console.log("aaaaaaaaa : ", jVarLocalSavedPk);
+        // console.log("------- : ", jVarLocalSavedPk);
 
         Status200({ inRowPk: jVarLocalSavedPk });
     };
 
-    if (jVarLocalResponse.status === 500) {
-        let jVarLocalSavedPk = await jVarLocalResponse.text();
-        Status500({ inResponse: jVarLocalSavedPk });
-    };
+    // if (jVarLocalResponse.status === 500) {
+    //     let jVarLocalSavedPk = await jVarLocalResponse.text();
+    //     Status500({ inResponse: jVarLocalSavedPk });
+    // };
 };
 
 export { StartFunc }

@@ -1,6 +1,6 @@
 import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/EntryFile.js";
 import UrlJson from "./url.json" with { type: "json" };
-import ConfigJson from "../../../../../../../../Config.json" with { type: "json" };
+import ConfigJson from "../../../../../../../../../Config.json" with { type: "json" };
 
 let StartFunc = async ({ inCurrentTarget }) => {
     let jVarTableName = ConfigJson.TableName;

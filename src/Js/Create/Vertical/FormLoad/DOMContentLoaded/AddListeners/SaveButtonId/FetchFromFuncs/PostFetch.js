@@ -1,5 +1,5 @@
 import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/entryFile.js";
-import ConfigJson from "../../../../../../Config.json" with { type: "json" };
+import ConfigJson from "../../../../../../../Config.json" with { type: "json" };
 import UrlJson from "./url.json" with { type: "json" };
 
 let StartFunc = async () => {

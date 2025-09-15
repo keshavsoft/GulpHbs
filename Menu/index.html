@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected vs Unprotected</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full px-6">
+
+        <!-- Protected -->
+        <div
+            class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+            <div class="w-24 h-24 rounded-full border-4 border-green-500 flex items-center justify-center mb-6">
+                <i class="fa-solid fa-shield-halved text-green-500 text-4xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-green-600 mb-6">Protected Link</h2>
+            <a href="./Protected/pages"
+                class="w-full py-4 px-6 bg-green-600 text-white text-lg font-semibold rounded-xl 
+         flex items-center justify-center gap-3 hover:bg-green-700 hover:scale-105 hover:shadow-lg transition duration-300">
+                <i class="fa-solid fa-lock"></i> Go Secure
+            </a>
+        </div>
+
+        <!-- Unprotected -->
+        <div
+            class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+            <div class="w-24 h-24 rounded-full border-4 border-red-500 flex items-center justify-center mb-6">
+                <i class="fa-solid fa-triangle-exclamation text-red-500 text-4xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Unprotected Link</h2>
+            <a href="./UnProtected/pages"
+                class="w-full py-4 px-6 bg-red-600 text-white text-lg font-semibold rounded-xl 
+         flex items-center justify-center gap-3 hover:bg-red-700 hover:scale-105 hover:shadow-lg transition duration-300">
+                <i class="fa-solid fa-ban"></i> Risky Mode
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

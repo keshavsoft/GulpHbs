@@ -1,5 +1,5 @@
 import getUrlJson from './getUrl.json' with {type: 'json'};
-import CommonConfigJson from '../../../../Config.json' with {type: 'json'};
+import CommonConfigJson from '../../../../../Config.json' with {type: 'json'};
 
 let StartFunc = async () => {
     let jVarLocalCommonTable = CommonConfigJson.TableName;

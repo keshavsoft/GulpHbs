@@ -1,5 +1,5 @@
 import UrlJson from './url.json' with {type: 'json'};
-import commonConfig from '../../../Config.json' with {type: 'json'};
+import commonConfig from '../../../../Config.json' with {type: 'json'};
 
 let StartFunc = async () => {
     let jVarLocalFilterString = getUrlQueryParams({ inGetKey: "pk" });

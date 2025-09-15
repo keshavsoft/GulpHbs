@@ -1,45 +1,65 @@
 {
-    "tableName": "UsersTable",
+    "tableName": "JournalsTable",
     "columns": [
         {
-            "field": "UserName",
-            "title": "UserName",
-            "unique": true,
-            "type": "text",
+            "field": "AccountName",
+            "title": "Account Name",
             "isInput": true,
+            "filterControl": "select",
+            "autoFocus": true,
             "isAutoFocus": true
         },
         {
-            "field": "Password",
-            "title": "Password",
-            "type": "text",
-            "isInput": true
-        }
-    ],
-    "data": [
+            "field": "Date",
+            "title": "Date",
+            "isDate": true,
+            "dateConfig": {
+                "min": "2025-07-01",
+                "max": "2025-07-25"
+            }
+        },
         {
-            "UserName": "Keshav",
-            "Password": 9848163021
-        }
-    ],
-    "Vertical": [
-        {
-            "field": "UserName",
-            "title": "UserName",
-            "unique": true,
-            "type": "text",
+            "field": "Description",
+            "title": "Description",
             "isInput": true
         },
         {
-            "field": "Password",
-            "title": "Password",
-            "type": "text",
-            "isInput": true
+            "field": "Credit",
+            "title": "Credit",
+            "type": "number",
+            "isNumber": true,
+            "filterControl": "select",
+            "showRupee": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true,
+            "align": "right",
+            "minusColumn": "Debit"
+        },
+        {
+            "field": "Debit",
+            "title": "Debit",
+            "type": "number",
+            "isNumber": true,
+            "filterControl": "select",
+            "showRupee": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true,
+            "align": "right",
+            "minusColumn": "Credit"
         }
     ],
-    "DataTableOptions": {
-        "Header": {
-            "autoFocus": "title"
-        }
-    }
+    "data": [],
+    "Vertical": []
 }

@@ -355,3 +355,7 @@ createFooterWS focus working good, but remove # and add autofocus
 ### 1.5.7
 
 - Menu folder added
+
+### 1.5.8
+
+- parent working good

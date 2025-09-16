@@ -1,65 +1,45 @@
 {
-    "tableName": "JournalsTable",
+    "tableName": "UsersTable",
     "columns": [
         {
-            "field": "AccountName",
-            "title": "Account Name",
+            "field": "UserName",
+            "title": "UserName",
+            "unique": true,
+            "type": "text",
             "isInput": true,
-            "filterControl": "select",
-            "autoFocus": true,
             "isAutoFocus": true
         },
         {
-            "field": "Date",
-            "title": "Date",
-            "isDate": true,
-            "dateConfig": {
-                "min": "2025-07-01",
-                "max": "2025-07-25"
-            }
-        },
+            "field": "Password",
+            "title": "Password",
+            "type": "text",
+            "isInput": true
+        }
+    ],
+    "data": [
         {
-            "field": "Description",
-            "title": "Description",
+            "UserName": "Keshav",
+            "Password": 9848163021
+        }
+    ],
+    "Vertical": [
+        {
+            "field": "UserName",
+            "title": "UserName",
+            "unique": true,
+            "type": "text",
             "isInput": true
         },
         {
-            "field": "Credit",
-            "title": "Credit",
-            "type": "number",
-            "isNumber": true,
-            "filterControl": "select",
-            "showRupee": true,
-            "numberConfig": {
-                "step": "0.01",
-                "min": "0",
-                "max": "999999999"
-            },
-            "footerFormatter": "TotalFormatter",
-            "ShowTotal": true,
-            "ShowDifference": true,
-            "align": "right",
-            "minusColumn": "Debit"
-        },
-        {
-            "field": "Debit",
-            "title": "Debit",
-            "type": "number",
-            "isNumber": true,
-            "filterControl": "select",
-            "showRupee": true,
-            "numberConfig": {
-                "step": "0.01",
-                "min": "0",
-                "max": "999999999"
-            },
-            "footerFormatter": "TotalFormatter",
-            "ShowTotal": true,
-            "ShowDifference": true,
-            "align": "right",
-            "minusColumn": "Credit"
+            "field": "Password",
+            "title": "Password",
+            "type": "text",
+            "isInput": true
         }
     ],
-    "data": [],
-    "Vertical": []
+    "DataTableOptions": {
+        "Header": {
+            "autoFocus": "title"
+        }
+    }
 }

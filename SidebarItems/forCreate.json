@@ -23,6 +23,12 @@
                 "DisplayName": "footerWT",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "SecureWS",
+                "DisplayName": "SecureWS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
             }
         ]
     },

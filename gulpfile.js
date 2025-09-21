@@ -559,13 +559,6 @@ const LocalFuncChangeJsConfigForProtected = ({ inDistPath }) => {
     fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };
 
-gulp.task("k2", function () {
-    console.log("aaaaaaaa");
-
-    return false;
-});
-
-
 gulp.task("build:dev", gulp.series("clean:dev", "copy:dev:css", "copy:dev:html", "copy:dev:html:index", "copy:dev:assets", "copy:dev:js", "beautify:css", "copy:dev:vendor"));
 
 gulp.task("build:dist", gulp.series("clean:dist", "copy:dist:css", "copy:dist:html", "copy:dist:html:index", "copy:dist:assets", "minify:css", "minify:html", "minify:html:index", "copy:dist:vendor", "end:dist"));

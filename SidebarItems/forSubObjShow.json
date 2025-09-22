@@ -1,0 +1,35 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "ShowAll",
+        "DisplayName": "Sub_Tabel_Obj_Show",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "AsIs",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWS",
+                "DisplayName": "ShowWS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWSAndPage",
+                "DisplayName": "showWSAndPage",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    }
+]

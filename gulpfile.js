@@ -47,6 +47,8 @@ const SideBarItemsforAlter = require("./SidebarItems/forAlter.json")
 const SideBarItemsforDownload = require("./SidebarItems/forDownload.json")
 const SideBarItemsforCards = require("./SidebarItems/forCards.json")
 const SideBarItemsforCharts = require("./SidebarItems/forCharts.json")
+const SideBarItemsforSubObjShow = require("./SidebarItems/forSubObjShow.json")
+const SideBarItemsforSubArrayShow = require("./SidebarItems/forSubArrayShow.json")
 
 // Define paths
 const paths = {
@@ -117,7 +119,9 @@ var templateData = {
     SideBarItemsforDownload: SideBarItemsforDownload,
     SideBarItemsforCards: SideBarItemsforCards,
     SideBarItemsforCharts: SideBarItemsforCharts,
-    SideBarItemsForGroupBy: SideBarItemsForGroupBy
+    SideBarItemsForGroupBy: SideBarItemsForGroupBy,
+    SideBarItemsforSubObjShow: SideBarItemsforSubObjShow,
+    SideBarItemsforSubArrayShow: SideBarItemsforSubArrayShow
 };
 
 options = {
